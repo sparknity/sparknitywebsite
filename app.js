@@ -398,33 +398,60 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contactForm');
   const formFeedback = document.getElementById('formFeedback');
   if (contactForm && formFeedback) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const origText = submitBtn.innerHTML;
-      submitBtn.innerHTML = `<span>Sending inquiry...</span>`;
-      submitBtn.disabled = true;
 
-      setTimeout(() => {
-        submitBtn.innerHTML = origText;
-        submitBtn.disabled = false;
-        formFeedback.classList.add('success');
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const origHTML = submitBtn.innerHTML;
+      submitBtn.innerHTML = `<span>Sending...</span>`;
+      submitBtn.disabled = true;
+      formFeedback.className = 'form-feedback-message';
+      formFeedback.innerHTML = '';
+
+      // Collect pill selections into hidden fields before sending
+      const selectedType = contactForm.querySelector('.project-type-pill.selected');
+      let projectTypeInput = contactForm.querySelector('input[name="project_type"]');
+      if (!projectTypeInput) {
+        projectTypeInput = document.createElement('input');
+        projectTypeInput.type = 'hidden';
+        projectTypeInput.name = 'project_type';
+        contactForm.appendChild(projectTypeInput);
+      }
+      projectTypeInput.value = selectedType ? selectedType.dataset.value : 'Not specified';
+
+      try {
+        const formData = new FormData(contactForm);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+
+        if (data.success) {
+          formFeedback.classList.add('success');
+          formFeedback.innerHTML = `
+            <strong>Thank you!</strong> Your project brief has been received. A senior engineer will review your specifications and reply to your work email within 24 hours.
+          `;
+          contactForm.reset();
+          projectTypePills.forEach((p, idx) => {
+            if (idx === 0) p.classList.add('selected');
+            else p.classList.remove('selected');
+          });
+        } else {
+          throw new Error(data.message || 'Submission failed');
+        }
+      } catch (err) {
+        formFeedback.classList.add('error');
         formFeedback.innerHTML = `
-          <strong>Thank you!</strong> Your project brief has been received. A senior engineer will review your specifications and reply to your work email within 24 hours.
+          <strong>Something went wrong.</strong> Please email us directly at <a href="mailto:info@sparknity.com" style="color:inherit;font-weight:600;">info@sparknity.com</a> and we'll get right back to you.
         `;
-        contactForm.reset();
-        projectTypePills.forEach((p, idx) => {
-          if (idx === 0) p.classList.add('selected');
-          else p.classList.remove('selected');
-        });
-        budgetPills.forEach((p, idx) => {
-          if (idx === 1) p.classList.add('selected');
-          else p.classList.remove('selected');
-        });
-      }, 700);
+      } finally {
+        submitBtn.innerHTML = origHTML;
+        submitBtn.disabled = false;
+      }
     });
   }
+
 
   // 9. Modal Handlers (Book a Call)
   const modalOverlay = document.getElementById('callModal');

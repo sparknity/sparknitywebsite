@@ -1356,22 +1356,29 @@
             </div>
 
             <form id="contactForm">
+              <!-- Web3Forms config — replace YOUR_ACCESS_KEY after signing up at web3forms.com -->
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+              <input type="hidden" name="subject" value="New Lead from Sparknity Website">
+              <input type="hidden" name="from_name" value="Sparknity Website">
+              <input type="hidden" name="redirect" value="false">
+              <input type="checkbox" name="botcheck" style="display:none">
+
               <!-- Row 1: Name & Work Email -->
               <div class="form-row-2col">
                 <div class="form-group-lux">
                   <label class="form-label-lux" for="clientName">Your Name <span class="req-star">*</span></label>
-                  <input type="text" id="clientName" class="form-input-lux" placeholder="Sarah Connor" required autocomplete="name">
+                  <input type="text" id="clientName" name="name" class="form-input-lux" placeholder="Sarah Connor" required autocomplete="name">
                 </div>
                 <div class="form-group-lux">
                   <label class="form-label-lux" for="clientEmail">Work Email <span class="req-star">*</span></label>
-                  <input type="email" id="clientEmail" class="form-input-lux" placeholder="sarah@company.com" required autocomplete="email">
+                  <input type="email" id="clientEmail" name="email" class="form-input-lux" placeholder="sarah@company.com" required autocomplete="email">
                 </div>
               </div>
 
               <!-- Row 2: Company or Project Name -->
               <div class="form-group-lux">
                 <label class="form-label-lux" for="clientCompany">Company or Project</label>
-                <input type="text" id="clientCompany" class="form-input-lux" placeholder="Acme Inc. / Stealth">
+                <input type="text" id="clientCompany" name="company" class="form-input-lux" placeholder="Acme Inc. / Stealth">
               </div>
 
               <!-- Row 3: Project Type Segmented Selection -->
@@ -1389,7 +1396,7 @@
               <!-- Row 5: Detailed Project Scope (Optional) -->
               <div class="form-group-lux">
                 <label class="form-label-lux" for="projectScope">Project Brief &amp; Goals <span style="font-size: 12px; font-weight: 400; color: #94a3b8; margin-left: 4px;">(Optional)</span></label>
-                <textarea id="projectScope" class="form-textarea-lux" placeholder="Describe what you're building, key technical requirements, existing stack (if any), and desired outcomes..."></textarea>
+                <textarea id="projectScope" name="project_brief" class="form-textarea-lux" placeholder="Describe what you're building, key technical requirements, existing stack (if any), and desired outcomes..."></textarea>
               </div>
 
               <!-- Row 6: Submit CTA & Security Footnote -->
