@@ -3235,7 +3235,7 @@ a {
    Bottom CTA Section with Peeking Mockup
    ========================================================================== */
 .bottom-cta-section {
-  padding: 120px 0 0 0;
+  padding: 100px 0;
   text-align: center;
   background: #ffffff;
   border-top: 1px solid var(--border-hairline);
@@ -3245,7 +3245,7 @@ a {
 
 .bottom-cta-content {
   max-width: 680px;
-  margin: 0 auto 48px auto;
+  margin: 0 auto;
 }
 
 .bottom-cta-icon {
