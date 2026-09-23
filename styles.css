@@ -519,6 +519,18 @@ a {
   color: var(--text-primary);
 }
 
+.brand-logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform var(--transition-smooth);
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.05);
+}
+
 .logo-symbol {
   width: 28px;
   height: 28px;
