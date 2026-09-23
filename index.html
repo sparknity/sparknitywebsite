@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sparknity — Engineering the future, one product at a time.</title>
+  <meta name="description" content="Sparknity is an AI-first software engineering studio and digital product partner. We design, build, and scale world-class software for ambitious startups and enterprises.">
+  <meta name="keywords" content="Software Agency, AI Development, Next.js, React, Mobile Apps, Full-Stack, Tech Startup, Product Design">
+  
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:title" content="Sparknity — Engineering the future, one product at a time.">
+  <meta property="og:description" content="A small, senior team shipping premium software with an AI-first mindset. From concept to launch in weeks.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a855f7'><path d='M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z'/></svg>">
+  
+  <!-- Inter & Typography Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Atmospheric Lighting -->
+  <div class="ambient-glow-top"></div>
+  <div class="ambient-glow-mid"></div>
+  <div class="ambient-glow-bottom"></div>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo" aria-label="Sparknity Home">
+        <div class="logo-symbol">
+          <!-- Spark Star Icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/>
+          </svg>
+        </div>
+        <span>SPARKNITY</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#stack" class="nav-link">Stack</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <!-- Action Button -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-secondary btn-sm" style="display: none;" id="navTalkBtn">Contact</a>
+        <button type="button" class="btn btn-primary btn-sm open-call-modal">Book a Call</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#process" class="nav-link">Process</a>
+    <a href="#work" class="nav-link">Work</a>
+    <a href="#stack" class="nav-link">Stack</a>
+    <a href="#reviews" class="nav-link">Reviews</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+    <a href="#contact" class="btn btn-primary" style="margin-top: 12px;">Start a Project</a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <!-- Badge -->
+        <div class="hero-badge-wrap">
+          <div class="hero-pill">
+            <span style="font-size: 14px;">✦</span>
+            <span>AI-Native Software Engineering Studio</span>
+          </div>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="hero-title">
+          Engineering the future,<br>
+          <span class="gradient-text">one product at a time.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-desc">
+          We build modern digital experiences and scalable software for ambitious startups and enterprises. 
+          From concept to code, we turn bold ideas into category-defining products.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-group">
+          <a href="#contact" class="btn btn-primary">
+            <span>Start a project</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#work" class="btn btn-secondary">
+            <span>Explore our work</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Interactive AI Scope Assistant Box (Nexura-inspired live interactive agent bar) -->
+        <div class="hero-assistant-box">
+          <div class="assistant-header">
+            <div class="assistant-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-violet)" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 16v-4M12 8h.01"></path>
+              </svg>
+              <span>Instant AI Project Scope Estimator</span>
+            </div>
+            <div class="assistant-live-indicator">
+              <span></span>
+              <span>Online · Ready</span>
+            </div>
+          </div>
+
+          <div class="assistant-input-wrapper">
+            <input 
+              type="text" 
+              id="assistantInput" 
+              class="assistant-input" 
+              placeholder="Describe what you want to build (e.g. AI fintech copilot, mobile telehealth app)..." 
+              value="AI SaaS MVP with Custom LLM Copilot"
+            >
+            <button type="button" id="assistantSubmit" class="assistant-submit-btn" aria-label="Calculate Scope">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Quick suggestion chips -->
+          <div class="assistant-suggestions">
+            <span class="suggestion-label">Try quick presets:</span>
+            <button type="button" class="suggestion-chip" data-preset="ai-saas">AI SaaS MVP</button>
+            <button type="button" class="suggestion-chip" data-preset="mobile-app">Cross-Platform App</button>
+            <button type="button" class="suggestion-chip" data-preset="cloud-migration">Cloud DevOps</button>
+            <button type="button" class="suggestion-chip" data-preset="fintech">Fintech Engine</button>
+          </div>
+
+          <!-- Dynamic Output estimation -->
+          <div class="assistant-result-card" id="assistantResult">
+            <div>
+              <div class="result-item-label">Recommended Stack</div>
+              <div class="result-item-value" id="recStack">Next.js 14 · FastAPI · OpenAI/Claude · PostgreSQL</div>
+            </div>
+            <div>
+              <div class="result-item-label">Estimated Timeline</div>
+              <div class="result-item-value" id="recTimeline">4 - 6 Weeks (Iterative sprints)</div>
+            </div>
+            <div>
+              <div class="result-item-label">Dedicated Pod</div>
+              <div class="result-item-value" id="recTeam">1 Lead AI Eng · 1 Full-Stack · 1 UX Designer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Logos Strip -->
+        <div class="hero-logos-strip">
+          <div class="logos-label">Trusted by founders & leaders at high-growth companies</div>
+          <div class="logos-row">
+            <div class="logo-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h7v7H4zm9 0h7v7h-7zm0 9h7v7h-7zm-9 0h7v7H4z"/></svg>
+              <span>Codecraft_</span>
+            </div>
+            <div class="logo-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+              <span>CoreOS</span>
+            </div>
+            <div class="logo-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 12l10 10 10-10L12 2z"/></svg>
+              <span>Mastermail</span>
+            </div>
+            <div class="logo-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="4"/></svg>
+              <span>PictelAI</span>
+            </div>
+            <div class="logo-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2z"/></svg>
+              <span>Veloce</span>
+            </div>
+            <div class="logo-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              <span>CloudScale</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Metrics & Mission Section
+         ========================================================================== -->
+    <section class="metrics-section" id="about">
+      <div class="container">
+        <div class="mission-grid">
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              <span>Who We Are</span>
+            </div>
+            <h2 class="mission-title">
+              A small, senior team that ships premium software with an AI-first mindset.
+            </h2>
+          </div>
+          <div>
+            <p class="mission-body">
+              We combine deep technical expertise with rapid execution. No bloat, no junior developers learning on your dime — just battle-tested engineers and product designers obsessed with craftsmanship and measurable business velocity.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4-Card Bento Metrics -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">20<span class="highlight">+</span></div>
+            <div class="stat-label">Products & platforms launched</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10<span class="highlight">+</span></div>
+            <div class="stat-label">Global venture-backed clients</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4.9<span class="highlight">/5</span></div>
+            <div class="stat-label">Average client satisfaction rating</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">99<span class="highlight">%</span></div>
+            <div class="stat-label">On-time delivery & retention rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Services Section (10 Core Disciplines)
+         ========================================================================== -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Services</span>
+          </div>
+          <h2>Everything you need to design, build and ship modern software.</h2>
+          <p class="section-subtitle">
+            From the first wireframe to high-scale production deployments, our multidisciplinary squad handles the full product lifecycle.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div>
+              <div class="service-header-row">
+                <div class="service-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <span class="service-num">01</span>
+              </div>
+              <h3 class="service-title">Full-Stack Web Apps</h3>
+              <p class="service-desc">
+                High-performance web applications built on Next.js, React, Node.js, and TypeScript. Optimized for sub-second speeds, flawless SEO, and responsive fidelity.
+              </p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">Next.js</span>
+              <span class="service-tag">React</span>
+              <span class="service-tag">TypeScript</span>
+              <span class="service-tag">Tailwind</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div>
+              <div class="service-header-row">
+                <div class="service-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  </svg>
+                </div>
+                <span class="service-num">02</span>
+              </div>
+              <h3 class="service-title">Mobile Applications</h3>
+              <p class="service-desc">
+                Native-grade iOS & Android applications built with Flutter and React Native. Smooth 60fps gesture physics, push notifications, and offline-first data sync.
+              </p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">Flutter</span>
+              <span class="service-tag">React Native</span>
+              <span class="service-tag">iOS</span>
+              <span class="service-tag">Android</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card spotlight">
+            <div>
+              <div class="service-header-row">
+                <div class="service-icon-wrap" style="background: rgba(168, 85, 247, 0.25); color: #ffffff;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm1-5.5a2 2 0 0 0-4 0v1h4z"></path>
+                  </svg>
+                </div>
+                <span class="service-num" style="color: #c084fc;">03 · AI First</span>
+              </div>
+              <h3 class="service-title">AI & Machine Learning</h3>
+              <p class="service-desc">
+                Custom LLM integrations, autonomous multi-agent workflows, RAG knowledge retrieval, fine-tuned models, and embedding pipelines that automate mission-critical tasks.
+              </p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">OpenAI</span>
+              <span class="service-tag">Claude</span>
+              <span class="service-tag">LangChain</span>
+              <span class="service-tag">Pinecone</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card">
+            <div>
+              <div class="service-header-row">
+                <div class="service-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"></path>
+                  </svg>
+                </div>
+                <span class="service-num">04</span>
+              </div>
+              <h3 class="service-title">UI/UX & Product Design</h3>
+              <p class="service-desc">
+                Tokenized design systems, clickable high-fidelity Figma prototypes, comprehensive user research, and micro-interactions engineered for conversion.
+              </p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">Figma</span>
+              <span class="service-tag">Design Systems</span>
+              <span class="service-tag">Wireframing</span>
+              <span class="service-tag">Prototypes</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="service-card">
+            <div>
+              <div class="service-header-row">
+                <div class="service-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                  </svg>
+                </div>
+                <span class="service-num">05</span>
+              </div>
+              <h3 class="service-title">Cloud Architecture & DevOps</h3>
+              <p class="service-desc">
+                AWS & GCP cloud engineering, automated CI/CD pipelines, Docker containerization, Kubernetes clusters, and infrastructure as code with Terraform.
+              </p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">AWS</span>
+              <span class="service-tag">Docker</span>
+              <span class="service-tag">Kubernetes</span>
+              <span class="service-tag">CI/CD</span>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="service-card">
+            <div>
+              <div class="service-header-row">
+                <div class="service-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <span class="service-num">06</span>
+              </div>
+              <h3 class="service-title">APIs & Distributed Backends</h3>
+              <p class="service-desc">
+                High-throughput REST and GraphQL APIs, event-driven messaging with Kafka/RabbitMQ, real-time WebSockets, and resilient relational & vector databases.
+              </p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">GraphQL</span>
+              <span class="service-tag">Node.js</span>
+              <span class="service-tag">Python</span>
+              <span class="service-tag">PostgreSQL</span>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="service-card">
+            <div>
+              <div class="service-header-row">
+                <div class="service-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                  </svg>
+                </div>
+                <span class="service-num">07</span>
+              </div>
+              <h3 class="service-title">Rapid MVP Prototyping</h3>
+              <p class="service-desc">
+                Go from napkin sketch to venture-ready, production-grade MVP in 4 to 6 weeks. Built on scalable foundations so you don't throw away code after fundraising.
+              </p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">4-6 Weeks</span>
+              <span class="service-tag">Venture Ready</span>
+              <span class="service-tag">Zero Bloat</span>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="service-card">
+            <div>
+              <div class="service-header-row">
+                <div class="service-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  </svg>
+                </div>
+                <span class="service-num">08</span>
+              </div>
+              <h3 class="service-title">Technical Strategy & Audits</h3>
+              <p class="service-desc">
+                Fractional CTO leadership, code quality audits, security compliance reviews, and technical roadmapping to ensure you de-risk your technology investments.
+              </p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">CTO Advisory</span>
+              <span class="service-tag">Architecture</span>
+              <span class="service-tag">Audits</span>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="service-card">
+            <div>
+              <div class="service-header-row">
+                <div class="service-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <span class="service-num">09</span>
+              </div>
+              <h3 class="service-title">Maintenance & Sprints</h3>
+              <p class="service-desc">
+                Ongoing monthly engineering retainers, 24/7 uptime monitoring, critical security patching, performance tuning, and continuous feature expansion.
+              </p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">24/7 SLA</span>
+              <span class="service-tag">Monitoring</span>
+              <span class="service-tag">Retainers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Philosophy & Why Sparknity
+         ========================================================================== -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Our Philosophy</span>
+          </div>
+          <h2>A partner that behaves like part of your team.</h2>
+          <p class="section-subtitle">
+            We don't just clear Jira tickets. We dig into your unit economics, challenge architectural assumptions, and obsess over real user adoption.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <div class="philosophy-step">Principle 01</div>
+            <h3 class="philosophy-title">Direct Senior Access</h3>
+            <p class="philosophy-body">
+              No junior pass-throughs or layers of account managers. You communicate directly with the senior engineers and design leads who are actively writing your code.
+            </p>
+          </div>
+          <div class="philosophy-card">
+            <div class="philosophy-step">Principle 02</div>
+            <h3 class="philosophy-title">Radical Transparency</h3>
+            <p class="philosophy-body">
+              Shared Slack channels, live staging links updated after every commit, and weekly video walkthroughs. You see progress in real-time, every step of the way.
+            </p>
+          </div>
+          <div class="philosophy-card">
+            <div class="philosophy-step">Principle 03</div>
+            <h3 class="philosophy-title">Speed Without Compromise</h3>
+            <p class="philosophy-body">
+              We ship rapid 1-week iterative sprints without taking shortcuts on automated tests, modular code, or comprehensive architectural documentation.
+            </p>
+          </div>
+          <div class="philosophy-card">
+            <div class="philosophy-step">Principle 04</div>
+            <h3 class="philosophy-title">True Ownership Mindset</h3>
+            <p class="philosophy-body">
+              We treat your product as if our own capital was at stake. We spot bottlenecks early, optimize infrastructure costs, and proactively recommend better solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Process & Methodology
+         ========================================================================== -->
+    <section id="process">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>How We Work</span>
+          </div>
+          <h2>A calm, transparent way of building.</h2>
+          <p class="section-subtitle">
+            A structured 4-step framework designed to eliminate guesswork, mitigate technical risk, and deliver predictable, high-impact results.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-card">
+            <div class="process-badge">01</div>
+            <h3 class="process-title">Discovery & Strategy</h3>
+            <p class="process-desc">
+              We align on your product goals, technical constraints, user personas, and core scope to produce an actionable roadmap and architecture spec.
+            </p>
+          </div>
+          <div class="process-card">
+            <div class="process-badge">02</div>
+            <h3 class="process-title">Design & Prototyping</h3>
+            <p class="process-desc">
+              We create tokenized design systems and clickable Figma prototypes, pressure-testing user journeys and UX before a single line of backend code is committed.
+            </p>
+          </div>
+          <div class="process-card">
+            <div class="process-badge">03</div>
+            <h3 class="process-title">Iterative Sprint Build</h3>
+            <p class="process-desc">
+              Modular, test-driven development delivered in continuous 1-week cycles with automated staging deployments and async video sprint demos.
+            </p>
+          </div>
+          <div class="process-card">
+            <div class="process-badge">04</div>
+            <h3 class="process-title">Launch & Hypercare</h3>
+            <p class="process-desc">
+              Production deployment, load testing, cloud telemetry setup, full IP and code handover, plus dedicated post-launch hypercare to guarantee stability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Portfolio & Case Studies Bento
+         ========================================================================== -->
+    <section id="work">
+      <div class="container">
+        <div class="section-header center">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Featured Case Studies</span>
+          </div>
+          <h2>Sample projects across industries.</h2>
+          <p class="section-subtitle">
+            Real products delivered for real clients, driving measurable customer retention and scalable business growth.
+          </p>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="portfolio-filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all">All Projects</button>
+          <button type="button" class="filter-btn" data-filter="ai">AI & ML</button>
+          <button type="button" class="filter-btn" data-filter="fintech">Fintech</button>
+          <button type="button" class="filter-btn" data-filter="health">HealthTech</button>
+          <button type="button" class="filter-btn" data-filter="saas">SaaS</button>
+          <button type="button" class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-category="ai fintech">
+            <div class="project-preview">
+              <div class="preview-mockup">
+                <div class="mockup-bar">
+                  <div class="mockup-dot"></div>
+                  <div class="mockup-dot"></div>
+                  <div class="mockup-dot"></div>
+                </div>
+                <div class="mockup-chart">
+                  <div class="mockup-bar-item" style="height: 35%;"></div>
+                  <div class="mockup-bar-item" style="height: 60%;"></div>
+                  <div class="mockup-bar-item" style="height: 45%;"></div>
+                  <div class="mockup-bar-item" style="height: 85%;"></div>
+                  <div class="mockup-bar-item" style="height: 70%;"></div>
+                  <div class="mockup-bar-item" style="height: 95%;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-category-row">
+                <span class="project-tag">AI · Fintech</span>
+                <span class="project-metric">$120M+ AUM</span>
+              </div>
+              <h3 class="project-title">Fintech Copilot</h3>
+              <p class="project-desc">
+                Autonomous portfolio rebalancing platform powered by fine-tuned LLMs with natural language query capabilities and sub-second trade execution.
+              </p>
+              <div class="project-tech-row">
+                <span class="tech-pill">Next.js</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">OpenAI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-category="health">
+            <div class="project-preview" style="background: linear-gradient(135deg, #121c24 0%, #0d1217 100%);">
+              <div class="preview-mockup" style="border-color: rgba(6, 182, 212, 0.3);">
+                <div class="mockup-bar">
+                  <div class="mockup-dot" style="background: rgba(6, 182, 212, 0.4);"></div>
+                  <div class="mockup-dot"></div>
+                  <div class="mockup-dot"></div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-around; height: 50px;">
+                  <div style="width: 28px; height: 28px; border-radius: 50%; border: 2px solid #06b6d4;"></div>
+                  <div style="width: 60px; height: 6px; background: rgba(255,255,255,0.2); border-radius: 3px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-category-row">
+                <span class="project-tag" style="color: var(--accent-cyan);">HealthTech</span>
+                <span class="project-metric">99.98% Uptime</span>
+              </div>
+              <h3 class="project-title">HealthPulse Telehealth</h3>
+              <p class="project-desc">
+                HIPAA-compliant cross-platform mobile care platform with encrypted WebRTC video visits, vital sign tracking, and electronic health record integration.
+              </p>
+              <div class="project-tech-row">
+                <span class="tech-pill">Flutter</span>
+                <span class="tech-pill">WebRTC</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-category="ecommerce">
+            <div class="project-preview" style="background: linear-gradient(135deg, #24181a 0%, #170d10 100%);">
+              <div class="preview-mockup" style="border-color: rgba(244, 63, 94, 0.3);">
+                <div class="mockup-bar">
+                  <div class="mockup-dot" style="background: rgba(244, 63, 94, 0.4);"></div>
+                  <div class="mockup-dot"></div>
+                  <div class="mockup-dot"></div>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; height: 45px;">
+                  <div style="background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+                  <div style="background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+                  <div style="background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-category-row">
+                <span class="project-tag" style="color: #fb7185;">E-Commerce</span>
+                <span class="project-metric">3.2x Faster</span>
+              </div>
+              <h3 class="project-title">OmniStore Headless</h3>
+              <p class="project-desc">
+                Next-generation composable storefront delivering instantaneous page transitions, algorithmic cross-selling, and unified multi-warehouse inventory.
+              </p>
+              <div class="project-tech-row">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">Shopify Plus</span>
+                <span class="tech-pill">Redis</span>
+                <span class="tech-pill">Tailwind</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card" data-category="saas">
+            <div class="project-preview" style="background: linear-gradient(135deg, #191c28 0%, #0d0f17 100%);">
+              <div class="preview-mockup" style="border-color: rgba(99, 102, 241, 0.3);">
+                <div class="mockup-bar">
+                  <div class="mockup-dot" style="background: rgba(99, 102, 241, 0.4);"></div>
+                  <div class="mockup-dot"></div>
+                  <div class="mockup-dot"></div>
+                </div>
+                <div class="mockup-chart">
+                  <div class="mockup-bar-item" style="height: 50%; background: #6366f1;"></div>
+                  <div class="mockup-bar-item" style="height: 75%; background: #6366f1;"></div>
+                  <div class="mockup-bar-item" style="height: 90%; background: #6366f1;"></div>
+                  <div class="mockup-bar-item" style="height: 65%; background: #6366f1;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-category-row">
+                <span class="project-tag" style="color: var(--primary-indigo);">B2B SaaS</span>
+                <span class="project-metric">10M+ Events/Day</span>
+              </div>
+              <h3 class="project-title">SaaS Metrics Engine</h3>
+              <p class="project-desc">
+                Real-time user attribution and cohort churn telemetry platform engineered for high-scale enterprise SaaS applications.
+              </p>
+              <div class="project-tech-row">
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">ClickHouse</span>
+                <span class="tech-pill">Vue.js</span>
+                <span class="tech-pill">Kafka</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card" data-category="ai saas">
+            <div class="project-preview">
+              <div class="preview-mockup">
+                <div class="mockup-bar">
+                  <div class="mockup-dot"></div>
+                  <div class="mockup-dot"></div>
+                  <div class="mockup-dot"></div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px; justify-content: center; height: 50px;">
+                  <div style="height: 6px; width: 80%; background: rgba(255,255,255,0.2); border-radius: 3px;"></div>
+                  <div style="height: 6px; width: 60%; background: rgba(255,255,255,0.15); border-radius: 3px;"></div>
+                  <div style="height: 6px; width: 45%; background: #c084fc; border-radius: 3px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-category-row">
+                <span class="project-tag">AI · EdTech</span>
+                <span class="project-metric">+65% Retention</span>
+              </div>
+              <h3 class="project-title">EduSphere AI Tutor</h3>
+              <p class="project-desc">
+                Personalized dynamic learning platform that constructs real-time adaptive curricula based on individual student mastery and quiz velocity.
+              </p>
+              <div class="project-tech-row">
+                <span class="tech-pill">Next.js</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Claude API</span>
+                <span class="tech-pill">Supabase</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card" data-category="saas fintech">
+            <div class="project-preview" style="background: linear-gradient(135deg, #18201a 0%, #0d140e 100%);">
+              <div class="preview-mockup" style="border-color: rgba(16, 185, 129, 0.3);">
+                <div class="mockup-bar">
+                  <div class="mockup-dot" style="background: rgba(16, 185, 129, 0.4);"></div>
+                  <div class="mockup-dot"></div>
+                  <div class="mockup-dot"></div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; height: 50px;">
+                  <div style="width: 40px; height: 40px; border-radius: 8px; border: 1px dashed #10b981; display: flex; align-items: center; justify-content: center; color: #10b981; font-size: 10px;">MAP</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-category-row">
+                <span class="project-tag" style="color: var(--accent-emerald);">Logistics</span>
+                <span class="project-metric">50k+ Daily Trips</span>
+              </div>
+              <h3 class="project-title">Nexus Fleet Telematics</h3>
+              <p class="project-desc">
+                Algorithmic routing and driver dispatch engine reducing fuel expenditure by 18% through dynamic geospatial traffic adaptation.
+              </p>
+              <div class="project-tech-row">
+                <span class="tech-pill">Go</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Mapbox</span>
+                <span class="tech-pill">Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Tech Stack Section
+         ========================================================================== -->
+    <section id="stack">
+      <div class="container">
+        <div class="section-header center">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Technology</span>
+          </div>
+          <h2>A modern stack chosen for excellence.</h2>
+          <p class="section-subtitle">
+            We pick tested, battle-proven, and future-proof tools that guarantee high performance, maintainability, and rapid engineering iteration.
+          </p>
+        </div>
+
+        <div class="stack-tabs-row">
+          <button type="button" class="stack-tab active" data-category="all">All Stack</button>
+          <button type="button" class="stack-tab" data-category="frontend">Frontend</button>
+          <button type="button" class="stack-tab" data-category="backend">Backend & DB</button>
+          <button type="button" class="stack-tab" data-category="ai">AI / ML</button>
+          <button type="button" class="stack-tab" data-category="cloud">Cloud & DevOps</button>
+          <button type="button" class="stack-tab" data-category="mobile">Mobile</button>
+        </div>
+
+        <div class="stack-grid">
+          <!-- Tech 1 -->
+          <div class="tech-card" data-category="frontend">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#3178C6"><path d="M1.5 0h21l-1.9 21.4L12 24l-8.6-2.6L1.5 0zm10.5 13.9v-7.8h-4v2.5h1.5v5.3h2.5zm5.7-5.3h-3.6v1.9h2.2c-.3 1.5-1.5 1.9-2.2 1.9v2.5c2.4 0 4.6-1.5 4.6-4.5 0-1.8-1-1.8-1-1.8z"/></svg>
+            </div>
+            <div class="tech-name">TypeScript</div>
+            <div class="tech-role">Frontend & Backend</div>
+          </div>
+
+          <!-- Tech 2 -->
+          <div class="tech-card" data-category="frontend">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#61DAFB"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)" fill="none" stroke="#61DAFB" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(90 12 12)" fill="none" stroke="#61DAFB" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(150 12 12)" fill="none" stroke="#61DAFB" stroke-width="1.2"/></svg>
+            </div>
+            <div class="tech-name">React</div>
+            <div class="tech-role">UI Library</div>
+          </div>
+
+          <!-- Tech 3 -->
+          <div class="tech-card" data-category="frontend">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.66 18.25L10.3 8.16v8.44H8.62V5.75h1.72l7.36 10.1V5.75h1.66v12.5h-1.7z"/></svg>
+            </div>
+            <div class="tech-name">Next.js 14</div>
+            <div class="tech-role">SSR / Fullstack</div>
+          </div>
+
+          <!-- Tech 4 -->
+          <div class="tech-card" data-category="backend">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#5FA04E"><path d="M12 2l9 5.2v10.4L12 22.8 3 17.6V7.2L12 2zm0 2.3L5 8.3v7.4l7 4 7-4V8.3l-7-4z"/></svg>
+            </div>
+            <div class="tech-name">Node.js</div>
+            <div class="tech-role">Runtime Engine</div>
+          </div>
+
+          <!-- Tech 5 -->
+          <div class="tech-card" data-category="backend ai">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#3776AB"><path d="M11.9 2c-3.1 0-5.7.8-5.7 3.3v2.5h5.8v.8H3.8C2 8.6 1 10.3 1 13c0 2.8 1.5 4.3 3.6 4.3h2.2v-2.1c0-1.8 1.5-3.3 3.3-3.3h5.7c1.5 0 2.8-1.2 2.8-2.8V5.3C18.6 2.8 15 2 11.9 2z"/></svg>
+            </div>
+            <div class="tech-name">Python</div>
+            <div class="tech-role">AI & Data Pipelines</div>
+          </div>
+
+          <!-- Tech 6 -->
+          <div class="tech-card" data-category="ai">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#10A37F"><path d="M22.28 9.87a6.05 6.05 0 0 0-.52-4.99 6.2 6.2 0 0 0-4.66-3.07 6.1 6.1 0 0 0-4.7 1.13A6.08 6.08 0 0 0 8.08.84 6.2 6.2 0 0 0 3.7 3.62a6.1 6.1 0 0 0-.82 4.77 6.06 6.06 0 0 0 .52 4.99 6.2 6.2 0 0 0 4.66 3.07 6.1 6.1 0 0 0 4.7-1.13 6.08 6.08 0 0 0 4.32 2.1 6.2 6.2 0 0 0 4.38-2.78 6.1 6.1 0 0 0 .82-4.77z"/></svg>
+            </div>
+            <div class="tech-name">OpenAI & LLMs</div>
+            <div class="tech-role">Intelligent Agents</div>
+          </div>
+
+          <!-- Tech 7 -->
+          <div class="tech-card" data-category="mobile">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#02569B"><path d="M14.3 0L3 11.3l3.4 3.4L17.7 3.4 14.3 0zM14.3 9.4l-7 7L10.7 20l7-7-3.4-3.6zM21 21.8l-3.4-3.4-3.4 3.4 3.4 3.4 3.4-3.4z"/></svg>
+            </div>
+            <div class="tech-name">Flutter</div>
+            <div class="tech-role">Cross-Platform Apps</div>
+          </div>
+
+          <!-- Tech 8 -->
+          <div class="tech-card" data-category="backend">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#4169E1"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.93V18h-2v-1.07c-2.31-.41-4-2.28-4-4.93h2c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3v-2c2.76 0 5 2.24 5 5 0 2.65-1.69 4.52-4 4.93z"/></svg>
+            </div>
+            <div class="tech-name">PostgreSQL</div>
+            <div class="tech-role">Relational DB</div>
+          </div>
+
+          <!-- Tech 9 -->
+          <div class="tech-card" data-category="backend">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#3ECF8E"><path d="M12 2L2 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div class="tech-name">Supabase</div>
+            <div class="tech-role">BaaS & Vector Auth</div>
+          </div>
+
+          <!-- Tech 10 -->
+          <div class="tech-card" data-category="cloud">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#FF9900"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L2 16l10 5 10-5-10-5z"/></svg>
+            </div>
+            <div class="tech-name">AWS Cloud</div>
+            <div class="tech-role">Scalable Compute</div>
+          </div>
+
+          <!-- Tech 11 -->
+          <div class="tech-card" data-category="cloud">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#2496ED"><path d="M13.9 11.2h2.2v2.2h-2.2zm-2.8 0h2.2v2.2h-2.2zm-2.8 0h2.2v2.2H8.3zm8.4-2.8h2.2v2.2h-2.2zm-2.8 0h2.2v2.2h-2.2zm-2.8 0h2.2v2.2h-2.2zm-2.8 0h2.2v2.2H5.5zm11.2-2.8h2.2v2.2h-2.2zm-2.8 0h2.2v2.2h-2.2zM2.8 14.5c.3 3.6 3.1 6.5 6.7 6.5h8.9c3.3 0 6.1-2.4 6.7-5.6l.9-.1c.6 0 1.2-.5 1.2-1.1 0-.9-.7-1.7-1.6-1.7-.8 0-1.5.6-1.6 1.4-.4-1.2-1.5-2.1-2.9-2.1h-.9c-.2-1.7-1.7-3-3.4-3h-9C5.4 8.9 3.5 11.3 2.8 14.5z"/></svg>
+            </div>
+            <div class="tech-name">Docker</div>
+            <div class="tech-role">Containers</div>
+          </div>
+
+          <!-- Tech 12 -->
+          <div class="tech-card" data-category="frontend">
+            <div class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="#06B6D4"><path d="M12 6c-3.3 0-5.4 1.7-6.2 5 1.2-1.7 2.7-2.3 4.4-1.9 1 .2 1.7 1 2.5 1.8 1.3 1.3 2.8 2.8 6.1 2.8 3.3 0 5.4-1.7 6.2-5-1.2 1.7-2.7 2.3-4.4 1.9-1-.2-1.7-1-2.5-1.8-1.3-1.3-2.8-2.8-6.1-2.8zM5.8 13.7c-3.3 0-5.4 1.7-6.2 5 1.2-1.7 2.7-2.3 4.4-1.9 1 .2 1.7 1 2.5 1.8 1.3 1.3 2.8 2.8 6.1 2.8 3.3 0 5.4-1.7 6.2-5-1.2 1.7-2.7 2.3-4.4 1.9-1-.2-1.7-1-2.5-1.8-1.3-1.3-2.8-2.8-6.1-2.8z"/></svg>
+            </div>
+            <div class="tech-name">Tailwind CSS</div>
+            <div class="tech-role">Utility Styling</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Domain Mastery / Industry Sectors
+         ========================================================================== -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Industry Expertise</span>
+          </div>
+          <h2>Domain mastery across regulated and consumer markets.</h2>
+          <p class="section-subtitle">
+            We understand the regulatory, security, and scalability nuances required in strict industries.
+          </p>
+        </div>
+
+        <div class="domain-container">
+          <!-- Sidebar Tabs -->
+          <div class="domain-tabs-list">
+            <button type="button" class="domain-tab-btn active" data-domain="fintech">
+              <span>Fintech & Banking</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <button type="button" class="domain-tab-btn" data-domain="healthtech">
+              <span>HealthTech & Medical</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <button type="button" class="domain-tab-btn" data-domain="saas">
+              <span>Enterprise B2B SaaS</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <button type="button" class="domain-tab-btn" data-domain="ecommerce">
+              <span>Headless E-Commerce</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <button type="button" class="domain-tab-btn" data-domain="logistics">
+              <span>Logistics & Supply Chain</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+
+          <!-- Content Panel -->
+          <div class="domain-content-panel">
+            <h3 class="domain-content-title" id="domainTitle">Fintech & Algorithmic Finance</h3>
+            <p class="domain-content-desc" id="domainDesc">
+              We engineer bank-grade financial platforms built for high throughput, sub-millisecond execution, and uncompromising compliance with PCI-DSS, SOC2, and Open Banking APIs.
+            </p>
+            <div class="domain-features-list" id="domainFeatures">
+              <div class="domain-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Real-time transaction ledgers & audits</span>
+              </div>
+              <div class="domain-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Automated algorithmic trading engines</span>
+              </div>
+              <div class="domain-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Stripe, Plaid & banking rail integrations</span>
+              </div>
+              <div class="domain-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Anti-fraud & anomaly detection models</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Testimonials / Reviews
+         ========================================================================== -->
+    <section id="reviews">
+      <div class="container">
+        <div class="section-header center">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Social Proof</span>
+          </div>
+          <h2>Words from teams we've worked with.</h2>
+          <p class="section-subtitle">
+            From venture-backed founders to enterprise engineering directors, here is what partners say about shipping with Sparknity.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars">
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="testimonial-quote">
+                "Sparknity felt like an organic extension of our core team. They delivered our MVP two weeks ahead of schedule, and the code quality blew our seed investors away."
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar">AR</div>
+              <div>
+                <div class="client-name">Alex Rivera</div>
+                <div class="client-role">Founder @ Veloce AI</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars">
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="testimonial-quote">
+                "The attention to design detail and micro-interactions is world class. Our customer conversion rate rose 42% following the launch of their revamped web app."
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">PM</div>
+              <div>
+                <div class="client-name">Priya Mehta</div>
+                <div class="client-role">Head of Product @ PulseHealth</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars">
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="testimonial-quote">
+                "Scaling to 100k daily active users was smooth because of the robust microservices architecture Sparknity designed from day zero."
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">DV</div>
+              <div>
+                <div class="client-name">David Vance</div>
+                <div class="client-role">CTO @ CloudScale</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ Accordion
+         ========================================================================== -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header center">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Frequently Asked Questions</span>
+          </div>
+          <h2>Answers before you ask.</h2>
+          <p class="section-subtitle">
+            Everything you need to know about our sprints, pricing model, IP ownership, and workflow.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button type="button" class="faq-trigger" aria-expanded="true">
+              <span>What is your typical project delivery timeline?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-body">
+              <p>
+                Most standalone MVPs and core product builds launch within 4 to 8 weeks. Larger multi-platform enterprise software solutions typically run across 2 to 4 months organized into transparent 1-week iterative sprints.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>How does your pricing & engagement model work?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-body">
+              <p>
+                We offer two models: (1) Milestone-based fixed pricing for clearly defined MVP deliverables, or (2) Dedicated monthly engineering pods on a predictable sprint retainer for ongoing feature expansion and scaling.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Who will I be working with directly?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-body">
+              <p>
+                You work directly with senior software architects and lead product designers. We have eliminated middle-management layers and account coordinators so that communications remain technically rigorous and direct.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Who owns the source code and Intellectual Property?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-body">
+              <p>
+                You own 100% of all code, Figma design assets, databases, and IP from day one. Everything is committed directly into your private GitHub/GitLab repositories under standard commercial licenses with no vendor lock-in.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Can you integrate with our existing codebase or engineers?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-body">
+              <p>
+                Yes. We regularly augment existing engineering teams, perform architecture overhauls, migrate legacy backends to modern cloud infrastructure, and build standalone microservices that interface with existing APIs.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>What post-launch support and guarantees do you offer?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-body">
+              <p>
+                Every deployment includes a 30-day hypercare bug-fix warranty. Afterwards, clients can transition to our proactive maintenance tiers for continuous SLA uptime monitoring, database maintenance, and feature enhancements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact & Project Builder Form
+         ========================================================================== -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Get in Touch</span>
+          </div>
+          <h2>Let's build something remarkable.</h2>
+          <p class="section-subtitle">
+            Have an ambitious product in mind? Let's discuss your roadmap, technical feasibility, and sprint timeline.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column Meta -->
+          <div class="contact-info-card">
+            <div class="contact-meta-item">
+              <div class="contact-meta-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-meta-content">
+                <h4>Direct Inquiries</h4>
+                <p>hello@sparknity.com</p>
+              </div>
+            </div>
+
+            <div class="contact-meta-item">
+              <div class="contact-meta-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-meta-content">
+                <h4>Engineering Hub</h4>
+                <p>San Francisco, CA · Distributed Worldwide</p>
+              </div>
+            </div>
+
+            <div class="contact-meta-item">
+              <div class="contact-meta-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="contact-meta-content">
+                <h4>Guaranteed Response SLA</h4>
+                <p>A senior architect will review and reply within 24 business hours.</p>
+              </div>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: var(--space-5); margin-top: var(--space-4);">
+              <h4 style="margin-bottom: 8px;">Prefer an instant conversation?</h4>
+              <p style="font-size: 14px; margin-bottom: 14px;">Schedule a 15-minute technical discovery call directly with our engineering leadership.</p>
+              <button type="button" class="btn btn-secondary btn-sm open-call-modal">Book Discovery Call</button>
+            </div>
+          </div>
+
+          <!-- Right Column Form -->
+          <div class="contact-form-card">
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="clientName">Your Name *</label>
+                  <input type="text" id="clientName" class="form-input" placeholder="Sarah Connor" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="clientEmail">Work Email *</label>
+                  <input type="email" id="clientEmail" class="form-input" placeholder="sarah@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Project Type</label>
+                <div class="pill-selection-group">
+                  <div class="selectable-pill project-type-pill selected">AI & LLM System</div>
+                  <div class="selectable-pill project-type-pill">Full-Stack Web App</div>
+                  <div class="selectable-pill project-type-pill">Mobile Application</div>
+                  <div class="selectable-pill project-type-pill">Rapid MVP (4-6 wks)</div>
+                  <div class="selectable-pill project-type-pill">Cloud & DevOps</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Approximate Budget</label>
+                <div class="pill-selection-group">
+                  <div class="selectable-pill budget-pill">&lt; $15k</div>
+                  <div class="selectable-pill budget-pill selected">$15k - $35k</div>
+                  <div class="selectable-pill budget-pill">$35k - $70k</div>
+                  <div class="selectable-pill budget-pill">$70k+</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="projectScope">Tell us about your project & goals *</label>
+                <textarea id="projectScope" class="form-textarea" placeholder="Briefly describe what you're building, target launch timeline, and any key technical requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Send Project Inquiry</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div class="form-feedback-message" id="formFeedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer & Giant Watermark
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1 -->
+        <div class="footer-brand-col">
+          <a href="#" class="brand-logo" style="margin-bottom: 12px;">
+            <div class="logo-symbol">
+              <svg viewBox="0 0 24 24"><path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/></svg>
+            </div>
+            <span>SPARKNITY</span>
+          </a>
+          <p>
+            An AI-first software engineering studio and digital product partner. Engineering the future, one product at a time.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-nav-list">
+            <li><a href="#services">Full-Stack Web Apps</a></li>
+            <li><a href="#services">Mobile Applications</a></li>
+            <li><a href="#services">AI & LLM Engineering</a></li>
+            <li><a href="#services">UI/UX & Design Systems</a></li>
+            <li><a href="#services">Cloud Architecture & DevOps</a></li>
+            <li><a href="#services">Rapid MVP (4-6 Weeks)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-nav-list">
+            <li><a href="#about">About Sparknity</a></li>
+            <li><a href="#process">Our Methodology</a></li>
+            <li><a href="#work">Case Studies</a></li>
+            <li><a href="#stack">Technology Stack</a></li>
+            <li><a href="#reviews">Client Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div>
+          <div class="footer-col-title">Legal & Contact</div>
+          <ul class="footer-nav-list">
+            <li><a href="#contact">Contact Support</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Security & Compliance</a></li>
+            <li><a href="#">hello@sparknity.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Sparknity Studio Inc. All rights reserved.</div>
+        <div class="system-status-indicator">
+          <span class="status-dot"></span>
+          <span>All systems operational · Accepting projects for Q3-Q4</span>
+        </div>
+      </div>
+
+      <!-- Giant Aesthetic Watermark matching Sparknity reference bottom -->
+      <div class="footer-giant-watermark" aria-hidden="true">
+        <span>SPARKNITY</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Interactive Call Booking Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="callModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">&times;</button>
+      <div class="eyebrow" style="margin-bottom: 8px;">
+        <span class="eyebrow-dot"></span>
+        <span>15-Minute Technical Discovery</span>
+      </div>
+      <h3 id="modalTitle" style="font-size: 24px; margin-bottom: 12px;">Talk with a Senior Architect</h3>
+      <p style="font-size: 14px; margin-bottom: 24px;">
+        Pick a time that works for you. We'll discuss your technical requirements, architectural options, and preliminary sprint estimates.
+      </p>
+      
+      <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 20px; text-align: left; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-emerald);"></div>
+          <span style="font-size: 14px; font-weight: 500;">Next available slot: Today at 2:00 PM PST</span>
+        </div>
+        <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
+          • Direct 1-on-1 with Lead Engineer<br>
+          • Architecture & Feasibility review<br>
+          • No sales pitching, strictly technical
+        </div>
+      </div>
+
+      <a href="#contact" class="btn btn-primary" style="width: 100%;" onclick="document.getElementById('callModal').classList.remove('open');">
+        Continue to Project Form
+      </a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
