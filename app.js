@@ -360,7 +360,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. Interactive Form Selectable Pills & Submission
+  // 8. Interactive Form Selectable Pills, Copy Email & Submission
+  const copyEmailBtn = document.getElementById('copyEmailBtn');
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', () => {
+      const email = 'hello@sparknity.com';
+      const label = copyEmailBtn.querySelector('.copy-btn-label');
+      navigator.clipboard.writeText(email).then(() => {
+        copyEmailBtn.classList.add('copied');
+        if (label) label.textContent = 'Copied!';
+        setTimeout(() => {
+          copyEmailBtn.classList.remove('copied');
+          if (label) label.textContent = 'Copy';
+        }, 2200);
+      }).catch(() => {
+        if (label) label.textContent = 'hello@sparknity.com';
+      });
+    });
+  }
+
   const projectTypePills = document.querySelectorAll('.project-type-pill');
   projectTypePills.forEach(pill => {
     pill.addEventListener('click', () => {
@@ -385,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const origText = submitBtn.innerHTML;
-      submitBtn.innerHTML = `Sending inquiry...`;
+      submitBtn.innerHTML = `<span>Sending inquiry...</span>`;
       submitBtn.disabled = true;
 
       setTimeout(() => {
@@ -393,12 +411,18 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = false;
         formFeedback.classList.add('success');
         formFeedback.innerHTML = `
-          <strong>Thank you!</strong> Your project inquiry has been received. A senior engineer will review your specifications and reply to your work email within 24 hours.
+          <strong>Thank you!</strong> Your project brief has been received. A senior engineer will review your specifications and reply to your work email within 24 hours.
         `;
         contactForm.reset();
-        projectTypePills.forEach(p => p.classList.remove('selected'));
-        budgetPills.forEach(p => p.classList.remove('selected'));
-      }, 800);
+        projectTypePills.forEach((p, idx) => {
+          if (idx === 0) p.classList.add('selected');
+          else p.classList.remove('selected');
+        });
+        budgetPills.forEach((p, idx) => {
+          if (idx === 1) p.classList.add('selected');
+          else p.classList.remove('selected');
+        });
+      }, 700);
     });
   }
 
