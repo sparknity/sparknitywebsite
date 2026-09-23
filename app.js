@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const recStack = document.getElementById('recStack');
   const recTimeline = document.getElementById('recTimeline');
   const recTeam = document.getElementById('recTeam');
-  const suggestionChips = document.querySelectorAll('.suggestion-chip');
+  const suggestionChips = document.querySelectorAll('.suggestion-chip, .ai-chip');
 
   const presetAnalyses = {
     'ai-saas': {

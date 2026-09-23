@@ -3,41 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sparknity — Engineering the future, one product at a time.</title>
+  <title>Sparknity — The Smartest Way to Build & Ship Modern Software</title>
   <meta name="description" content="Sparknity is an AI-first software engineering studio and digital product partner. We design, build, and scale world-class software for ambitious startups and enterprises.">
   <meta name="keywords" content="Software Agency, AI Development, Next.js, React, Mobile Apps, Full-Stack, Tech Startup, Product Design">
   
   <!-- OpenGraph / Social Meta -->
-  <meta property="og:title" content="Sparknity — Engineering the future, one product at a time.">
+  <meta property="og:title" content="Sparknity — The Smartest Way to Build & Ship Modern Software">
   <meta property="og:description" content="A small, senior team shipping premium software with an AI-first mindset. From concept to launch in weeks.">
   <meta property="og:type" content="website">
   
-  <!-- Favicon SVG -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a855f7'><path d='M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z'/></svg>">
+  <!-- Favicon SVG (Sparknity Split Plus Logo) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'><path d='M14 4.5C14 3.12 15.12 2 16.5 2C17.88 2 19 3.12 19 4.5V11C19 12.66 20.34 14 22 14H27.5C28.88 14 30 15.12 30 16.5C30 17.88 28.88 19 27.5 19H20.5C19.17 19 17.9 18.47 16.96 17.54L14.46 15.04C13.53 14.1 13 12.83 13 11.5V6C13 5.17 13.4 4.5 14 4.5Z' fill='%231470ef'/><path d='M18 27.5C18 28.88 16.88 30 15.5 30C14.12 30 13 28.88 13 27.5V21C13 19.34 11.66 18 10 18H4.5C3.12 18 2 16.88 2 15.5C2 14.12 3.12 13 4.5 13H11.5C12.83 13 14.1 13.53 15.04 14.46L17.54 16.96C18.47 17.9 19 19.17 19 20.5V26C19 26.83 18.6 27.5 18 27.5Z' fill='%2321ccee'/></svg>">
   
-  <!-- Inter & Typography Stylesheet -->
+  <!-- Salix-inspired Typography & Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Ambient Atmospheric Lighting -->
-  <div class="ambient-glow-top"></div>
-  <div class="ambient-glow-mid"></div>
-  <div class="ambient-glow-bottom"></div>
+  <!-- Signature Top Spectrum Stripe (Salix Exact 8px Rainbow Edge) -->
+  <div class="top-spectrum-bar"></div>
+
+  <!-- Technical Metric Ticks on Right Margin -->
+  <div class="margin-ticks-strip" aria-hidden="true">
+    <span>— 100K</span>
+    <span>— 70K</span>
+    <span>— 50K</span>
+    <span>— 30K</span>
+    <span>— 0</span>
+  </div>
 
   <!-- ==========================================================================
-       Header & Navigation
+       Header & Floating Pill Navigation (Salix Floating Nav Style)
        ========================================================================== -->
   <header class="site-header">
-    <div class="container nav-wrapper">
+    <div class="nav-floating-pill">
+      <!-- Exact Sparknity Logo -->
       <a href="#" class="brand-logo" aria-label="Sparknity Home">
         <div class="logo-symbol">
-          <!-- Spark Star Icon -->
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/>
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+            <defs>
+              <linearGradient id="sparknityLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#21ccee"/>
+                <stop offset="100%" stop-color="#1470ef"/>
+              </linearGradient>
+            </defs>
+            <!-- Top-Right Piece -->
+            <path d="M14 4.5C14 3.12 15.12 2 16.5 2C17.88 2 19 3.12 19 4.5V11C19 12.66 20.34 14 22 14H27.5C28.88 14 30 15.12 30 16.5C30 17.88 28.88 19 27.5 19H20.5C19.17 19 17.9 18.47 16.96 17.54L14.46 15.04C13.53 14.1 13 12.83 13 11.5V6C13 5.17 13.4 4.5 14 4.5Z" fill="url(#sparknityLogoGrad)"/>
+            <!-- Bottom-Left Piece -->
+            <path d="M18 27.5C18 28.88 16.88 30 15.5 30C14.12 30 13 28.88 13 27.5V21C13 19.34 11.66 18 10 18H4.5C3.12 18 2 16.88 2 15.5C2 14.12 3.12 13 4.5 13H11.5C12.83 13 14.1 13.53 15.04 14.46L17.54 16.96C18.47 17.9 19 19.17 19 20.5V26C19 26.83 18.6 27.5 18 27.5Z" fill="url(#sparknityLogoGrad)"/>
           </svg>
         </div>
-        <span>SPARKNITY</span>
+        <span>Sparknity</span>
       </a>
 
       <!-- Desktop Nav Links -->
@@ -53,10 +69,10 @@
 
       <!-- Action Button -->
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-secondary btn-sm" style="display: none;" id="navTalkBtn">Contact</a>
-        <button type="button" class="btn btn-primary btn-sm open-call-modal">Book a Call</button>
+        <a href="#contact" class="nav-link" style="margin-right: 4px;">Contact</a>
+        <button type="button" class="btn btn-dark open-call-modal">Book a Call</button>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -75,140 +91,360 @@
     <a href="#stack" class="nav-link">Stack</a>
     <a href="#reviews" class="nav-link">Reviews</a>
     <a href="#faq" class="nav-link">FAQ</a>
-    <a href="#contact" class="btn btn-primary" style="margin-top: 12px;">Start a Project</a>
+    <a href="#contact" class="btn btn-dark" style="margin-top: 8px;">Start a Project</a>
   </div>
 
   <main>
     <!-- ==========================================================================
-         Hero Section
+         Hero Section (Salix Clean Light Layout with Generous Whitespace)
          ========================================================================== -->
     <section class="hero-section" id="hero">
       <div class="container">
-        <!-- Badge -->
-        <div class="hero-badge-wrap">
-          <div class="hero-pill">
-            <span style="font-size: 14px;">✦</span>
-            <span>AI-Native Software Engineering Studio</span>
+        <div class="hero-content-wrap">
+          <!-- Trust Badge -->
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
+            <span>Join 20+ scaling venture-backed teams</span>
           </div>
+
+          <!-- Main Display Headline -->
+          <h1 class="hero-title">
+            The Smartest Way to<br>
+            Build & Ship Modern Software
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="hero-desc">
+            We build modern digital experiences and scalable software for ambitious startups and enterprises. 
+            From concept to code, we turn bold ideas into category-defining products.
+          </p>
+
+          <!-- CTA Buttons with Salix Spectrum Ambient Glow -->
+          <div class="hero-cta-group">
+            <div class="btn-glow-wrapper">
+              <div class="btn-glow-underlay"></div>
+              <a href="#contact" class="btn btn-dark">
+                <span>Book a Discovery Call</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+            <a href="#work" class="btn btn-light">
+              <span>Explore our work</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-subcaption">No Commitment Required · Reply Within 24 Hours</div>
         </div>
 
-        <!-- Main Headline -->
-        <h1 class="hero-title">
-          Engineering the future,<br>
-          <span class="gradient-text">one product at a time.</span>
-        </h1>
-
-        <!-- Subtitle -->
-        <p class="hero-desc">
-          We build modern digital experiences and scalable software for ambitious startups and enterprises. 
-          From concept to code, we turn bold ideas into category-defining products.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="hero-cta-group">
-          <a href="#contact" class="btn btn-primary">
-            <span>Start a project</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-          <a href="#work" class="btn btn-secondary">
-            <span>Explore our work</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 9l-7 7-7-7"/>
-            </svg>
-          </a>
-        </div>
-
-        <!-- Interactive AI Scope Assistant Box (Nexura-inspired live interactive agent bar) -->
-        <div class="hero-assistant-box">
-          <div class="assistant-header">
-            <div class="assistant-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-violet)" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 16v-4M12 8h.01"></path>
-              </svg>
-              <span>Instant AI Project Scope Estimator</span>
+        <!-- ==========================================================================
+             Hero Software Dashboard Mockup Frame (Salix Style)
+             ========================================================================== -->
+        <div class="hero-mockup-frame">
+          <div class="mockup-inner-grid">
+            <!-- Sidebar -->
+            <div class="mockup-sidebar">
+              <div>
+                <div class="mockup-brand">
+                  <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+                    <path d="M14 4.5C14 3.12 15.12 2 16.5 2C17.88 2 19 3.12 19 4.5V11C19 12.66 20.34 14 22 14H27.5C28.88 14 30 15.12 30 16.5C30 17.88 28.88 19 27.5 19H20.5C19.17 19 17.9 18.47 16.96 17.54L14.46 15.04C13.53 14.1 13 12.83 13 11.5V6C13 5.17 13.4 4.5 14 4.5Z" fill="#1470ef"/>
+                    <path d="M18 27.5C18 28.88 16.88 30 15.5 30C14.12 30 13 28.88 13 27.5V21C13 19.34 11.66 18 10 18H4.5C3.12 18 2 16.88 2 15.5C2 14.12 3.12 13 4.5 13H11.5C12.83 13 14.1 13.53 15.04 14.46L17.54 16.96C18.47 17.9 19 19.17 19 20.5V26C19 26.83 18.6 27.5 18 27.5Z" fill="#21ccee"/>
+                  </svg>
+                  <span>Sparknity</span>
+                </div>
+                <ul class="mockup-menu-list">
+                  <li class="mockup-menu-item active">
+                    <span>Inbox</span>
+                    <span class="mockup-badge">4</span>
+                  </li>
+                  <li class="mockup-menu-item"><span>Project Hub</span></li>
+                  <li class="mockup-menu-item"><span>Activity Feed</span></li>
+                  <li class="mockup-menu-item"><span>Sprint Tasks</span></li>
+                  <li class="mockup-menu-item"><span>Engineering Teams</span></li>
+                  <li class="mockup-menu-item"><span>Messages</span></li>
+                </ul>
+              </div>
+              <div style="font-size: 12px; color: var(--text-muted); padding-left: 8px;">
+                v2.4 Production Engine
+              </div>
             </div>
-            <div class="assistant-live-indicator">
-              <span></span>
-              <span>Online · Ready</span>
-            </div>
-          </div>
 
-          <div class="assistant-input-wrapper">
-            <input 
-              type="text" 
-              id="assistantInput" 
-              class="assistant-input" 
-              placeholder="Describe what you want to build (e.g. AI fintech copilot, mobile telehealth app)..." 
-              value="AI SaaS MVP with Custom LLM Copilot"
-            >
-            <button type="button" id="assistantSubmit" class="assistant-submit-btn" aria-label="Calculate Scope">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </button>
-          </div>
+            <!-- Body -->
+            <div class="mockup-body">
+              <div class="mockup-header-row">
+                <div class="mockup-header-title">Engineering Dashboard</div>
+                <div class="mockup-user-pill">
+                  <div class="mockup-avatar">SK</div>
+                  <div>
+                    <div style="font-weight: 600; color: var(--text-primary); font-size: 13px;">Alex Rivera</div>
+                    <div style="font-size: 11px; color: var(--text-muted);">alex@company.com</div>
+                  </div>
+                </div>
+              </div>
 
-          <!-- Quick suggestion chips -->
-          <div class="assistant-suggestions">
-            <span class="suggestion-label">Try quick presets:</span>
-            <button type="button" class="suggestion-chip" data-preset="ai-saas">AI SaaS MVP</button>
-            <button type="button" class="suggestion-chip" data-preset="mobile-app">Cross-Platform App</button>
-            <button type="button" class="suggestion-chip" data-preset="cloud-migration">Cloud DevOps</button>
-            <button type="button" class="suggestion-chip" data-preset="fintech">Fintech Engine</button>
-          </div>
+              <!-- Top Metric Hero Card -->
+              <div class="mockup-hero-card">
+                <div>
+                  <div style="font-size: 12px; color: var(--text-muted); font-weight: 500;">Total Pipeline Value</div>
+                  <div class="mockup-balance-amount">$59,236.09</div>
+                  <div style="font-size: 13px; color: var(--brand-emerald); font-weight: 500;">
+                    ↑ +$12,450.00 this month in production releases
+                  </div>
+                </div>
+                <!-- Sparkline SVG -->
+                <svg class="mockup-svg-sparkline" viewBox="0 0 220 50" fill="none">
+                  <path d="M5 38 C 30 38, 45 15, 70 25 C 95 35, 115 10, 140 18 C 165 26, 180 5, 215 8" stroke="#1470ef" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="140" cy="18" r="4" fill="#ffffff" stroke="#1470ef" stroke-width="2"/>
+                  <circle cx="215" cy="8" r="4" fill="#ffffff" stroke="#1470ef" stroke-width="2"/>
+                </svg>
+              </div>
 
-          <!-- Dynamic Output estimation -->
-          <div class="assistant-result-card" id="assistantResult">
-            <div>
-              <div class="result-item-label">Recommended Stack</div>
-              <div class="result-item-value" id="recStack">Next.js 14 · FastAPI · OpenAI/Claude · PostgreSQL</div>
-            </div>
-            <div>
-              <div class="result-item-label">Estimated Timeline</div>
-              <div class="result-item-value" id="recTimeline">4 - 6 Weeks (Iterative sprints)</div>
-            </div>
-            <div>
-              <div class="result-item-label">Dedicated Pod</div>
-              <div class="result-item-value" id="recTeam">1 Lead AI Eng · 1 Full-Stack · 1 UX Designer</div>
+              <!-- 3 Micro-Metrics -->
+              <div class="mockup-metrics-grid">
+                <div class="metric-micro-card">
+                  <div class="metric-micro-label">Weekly Throughput</div>
+                  <div class="metric-micro-value">$55,558.10</div>
+                  <div class="metric-micro-badge down">↓ -4% vs last sprint</div>
+                </div>
+                <div class="metric-micro-card">
+                  <div class="metric-micro-label">Active Users</div>
+                  <div class="metric-micro-value">7,368.59</div>
+                  <div class="metric-micro-badge up">↑ +3% new cohorts</div>
+                </div>
+                <div class="metric-micro-card">
+                  <div class="metric-micro-label">Sprint Completion</div>
+                  <div class="metric-micro-value">99.4%</div>
+                  <div class="metric-micro-badge up">↑ Zero blocker bugs</div>
+                </div>
+              </div>
+
+              <!-- Embedded AI Project Scope Assistant inside Dashboard -->
+              <div class="mockup-ai-scope-box">
+                <div class="ai-scope-header">
+                  <div class="ai-scope-title">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand-blue)" stroke-width="2.5">
+                      <polygon points="12 2 15 8 22 9 17 14 18 21 12 17 6 21 7 14 2 9 9 8 12 2"/>
+                    </svg>
+                    <span>Instant AI Project Scope Estimator</span>
+                  </div>
+                  <div class="ai-scope-live-badge">
+                    <span></span>
+                    <span>Ready</span>
+                  </div>
+                </div>
+
+                <div class="ai-scope-input-wrap">
+                  <input 
+                    type="text" 
+                    id="assistantInput" 
+                    class="ai-scope-input" 
+                    placeholder="Describe what you want to build (e.g. AI SaaS MVP, Fintech Trading Platform)..." 
+                    value="AI SaaS MVP with Custom LLM Copilot"
+                  >
+                  <button type="button" id="assistantSubmit" class="ai-scope-btn" aria-label="Calculate Scope">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="ai-chips-row">
+                  <span style="font-size: 11.5px; color: var(--text-muted); margin-right: 4px;">Presets:</span>
+                  <button type="button" class="ai-chip" data-preset="ai-saas">AI SaaS MVP</button>
+                  <button type="button" class="ai-chip" data-preset="mobile-app">Cross-Platform App</button>
+                  <button type="button" class="ai-chip" data-preset="cloud-migration">Cloud DevOps</button>
+                  <button type="button" class="ai-chip" data-preset="fintech">Fintech Engine</button>
+                </div>
+
+                <div class="ai-result-row" id="assistantResult">
+                  <div>
+                    <div class="ai-result-item-label">Recommended Stack</div>
+                    <div class="ai-result-item-value" id="recStack">Next.js 14 · FastAPI · OpenAI/Claude · PostgreSQL</div>
+                  </div>
+                  <div>
+                    <div class="ai-result-item-label">Estimated Timeline</div>
+                    <div class="ai-result-item-value" id="recTimeline">4 - 6 Weeks (Iterative sprints)</div>
+                  </div>
+                  <div>
+                    <div class="ai-result-item-label">Dedicated Pod</div>
+                    <div class="ai-result-item-value" id="recTeam">1 Lead AI Eng · 1 Full-Stack · 1 UX Designer</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
         <!-- Trust Logos Strip -->
         <div class="hero-logos-strip">
-          <div class="logos-label">Trusted by founders & leaders at high-growth companies</div>
+          <div class="logos-label">Trusted by technology leaders and founders worldwide</div>
           <div class="logos-row">
             <div class="logo-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h7v7H4zm9 0h7v7h-7zm0 9h7v7h-7zm-9 0h7v7H4z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h7v7H4zm9 0h7v7h-7zm0 9h7v7h-7zm-9 0h7v7H4z"/></svg>
               <span>Codecraft_</span>
             </div>
             <div class="logo-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
               <span>CoreOS</span>
             </div>
             <div class="logo-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 12l10 10 10-10L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 12l10 10 10-10L12 2z"/></svg>
               <span>Mastermail</span>
             </div>
             <div class="logo-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="4"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="4"/></svg>
               <span>PictelAI</span>
             </div>
             <div class="logo-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2z"/></svg>
               <span>Veloce</span>
             </div>
             <div class="logo-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
               <span>CloudScale</span>
             </div>
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Salix-Style Human 3-Column Feature Cards
+         ========================================================================== -->
+    <section>
+      <div class="container">
+        <div class="section-header center">
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
+            <span>Why Teams Choose Sparknity</span>
+          </div>
+          <h2>Simplifying the complexity of modern software.</h2>
+          <p class="section-subtitle">
+            Businesses choose Sparknity because we deliver transparent, high-velocity engineering without the overhead.
+          </p>
+        </div>
+
+        <div class="salix-feature-grid">
+          <!-- Card 1: Task Tracking -->
+          <div class="salix-card">
+            <div class="salix-card-preview">
+              <div class="task-checklist-preview">
+                <div class="task-preview-item">
+                  <div>
+                    <div class="task-preview-title">Architecture Sprint Sync</div>
+                    <div class="task-preview-time">09:00 AM – 10:00 AM</div>
+                  </div>
+                  <div class="avatar-stack">
+                    <div class="avatar-stack-item" style="background: #1470ef;">AR</div>
+                    <div class="avatar-stack-item" style="background: #6927da;">PM</div>
+                    <div class="avatar-stack-item" style="background: #10b981;">DV</div>
+                  </div>
+                </div>
+                <div class="task-preview-item">
+                  <div>
+                    <div class="task-preview-title">Production CI/CD Deploy</div>
+                    <div class="task-preview-time">11:30 AM – 12:00 PM</div>
+                  </div>
+                  <div class="avatar-stack">
+                    <div class="avatar-stack-item" style="background: #f23d94;">EC</div>
+                    <div class="avatar-stack-item" style="background: #21ccee;">SK</div>
+                  </div>
+                </div>
+                <div class="task-preview-item">
+                  <div>
+                    <div class="task-preview-title">LLM Fine-Tuning Benchmarks</div>
+                    <div class="task-preview-time">02:00 PM – 03:00 PM</div>
+                  </div>
+                  <div class="avatar-stack">
+                    <div class="avatar-stack-item" style="background: #ff4757;">NL</div>
+                    <div class="avatar-stack-item" style="background: #1470ef;">AR</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="salix-card-body">
+              <h3 class="salix-card-title">Task & Sprint Velocity</h3>
+              <p class="salix-card-desc">
+                Organize milestones, review code in real-time, and track deployment velocity across all platforms with zero friction.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Analytics Bar Chart -->
+          <div class="salix-card">
+            <div class="salix-card-preview">
+              <div class="analytics-chart-preview">
+                <div class="chart-bar-row">
+                  <div class="chart-bar-track">
+                    <div class="chart-bar-fill" style="width: 78%; background: #1470ef;">78%</div>
+                  </div>
+                </div>
+                <div class="chart-bar-row">
+                  <div class="chart-bar-track">
+                    <div class="chart-bar-fill" style="width: 52%; background: #ff4757;">52%</div>
+                  </div>
+                </div>
+                <div class="chart-bar-row">
+                  <div class="chart-bar-track">
+                    <div class="chart-bar-fill" style="width: 34%; background: #21ccee;">34%</div>
+                  </div>
+                </div>
+                <div class="chart-legend-row">
+                  <span><span class="legend-dot" style="background: #1470ef;"></span>Web Services</span>
+                  <span><span class="legend-dot" style="background: #ff4757;"></span>Mobile APIs</span>
+                  <span><span class="legend-dot" style="background: #21ccee;"></span>AI Inference</span>
+                </div>
+              </div>
+            </div>
+            <div class="salix-card-body">
+              <h3 class="salix-card-title">Real-Time Telemetry</h3>
+              <p class="salix-card-desc">
+                Monitor live traffic, latency, and cloud infrastructure costs with comprehensive observability out of the box.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Metrics Overview -->
+          <div class="salix-card">
+            <div class="salix-card-preview">
+              <div class="metrics-quad-preview">
+                <div class="metric-tile">
+                  <div class="metric-tile-title">Total Requests</div>
+                  <div class="metric-tile-num">7,869.99</div>
+                  <div style="font-size: 10px; color: var(--brand-coral); font-weight: 600;">-2% vs last month</div>
+                </div>
+                <div class="metric-tile">
+                  <div class="metric-tile-title">Active Clients</div>
+                  <div class="metric-tile-num">7,368.59</div>
+                  <div style="font-size: 10px; color: var(--brand-emerald); font-weight: 600;">+3% vs last month</div>
+                </div>
+                <div class="metric-tile">
+                  <div class="metric-tile-title">Uptime SLA</div>
+                  <div class="metric-tile-num">99.98%</div>
+                  <div style="font-size: 10px; color: var(--brand-emerald); font-weight: 600;">Optimal status</div>
+                </div>
+                <div class="metric-tile">
+                  <div class="metric-tile-title">Avg Latency</div>
+                  <div class="metric-tile-num">42ms</div>
+                  <div style="font-size: 10px; color: var(--brand-blue); font-weight: 600;">Sub-second speed</div>
+                </div>
+              </div>
+            </div>
+            <div class="salix-card-body">
+              <h3 class="salix-card-title">Reporting & Analytics</h3>
+              <p class="salix-card-desc">
+                Gain actionable insights into software performance, user retention, and conversion metrics across every release.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -219,8 +455,8 @@
       <div class="container">
         <div class="mission-grid">
           <div>
-            <div class="eyebrow">
-              <span class="eyebrow-dot"></span>
+            <div class="eyebrow-pill">
+              <span class="dot"></span>
               <span>Who We Are</span>
             </div>
             <h2 class="mission-title">
@@ -262,8 +498,8 @@
     <section id="services">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
             <span>Services</span>
           </div>
           <h2>Everything you need to design, build and ship modern software.</h2>
@@ -325,15 +561,15 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="service-card spotlight">
+          <div class="service-card" style="border-color: rgba(20, 112, 239, 0.4);">
             <div>
               <div class="service-header-row">
-                <div class="service-icon-wrap" style="background: rgba(168, 85, 247, 0.25); color: #ffffff;">
+                <div class="service-icon-wrap" style="background: #1470ef; color: #ffffff;">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm1-5.5a2 2 0 0 0-4 0v1h4z"></path>
                   </svg>
                 </div>
-                <span class="service-num" style="color: #c084fc;">03 · AI First</span>
+                <span class="service-num" style="color: var(--brand-blue);">03 · AI First</span>
               </div>
               <h3 class="service-title">AI & Machine Learning</h3>
               <p class="service-desc">
@@ -501,8 +737,8 @@
     <section>
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
             <span>Our Philosophy</span>
           </div>
           <h2>A partner that behaves like part of your team.</h2>
@@ -550,8 +786,8 @@
     <section id="process">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
             <span>How We Work</span>
           </div>
           <h2>A calm, transparent way of building.</h2>
@@ -599,8 +835,8 @@
     <section id="work">
       <div class="container">
         <div class="section-header center">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
             <span>Featured Case Studies</span>
           </div>
           <h2>Sample projects across industries.</h2>
@@ -624,19 +860,16 @@
           <!-- Project 1 -->
           <div class="project-card" data-category="ai fintech">
             <div class="project-preview">
-              <div class="preview-mockup">
-                <div class="mockup-bar">
-                  <div class="mockup-dot"></div>
-                  <div class="mockup-dot"></div>
-                  <div class="mockup-dot"></div>
+              <div class="project-mockup-sheet">
+                <div style="display: flex; gap: 4px;">
+                  <div style="width: 6px; height: 6px; border-radius: 50%; background: #e2e8f0;"></div>
+                  <div style="width: 6px; height: 6px; border-radius: 50%; background: #e2e8f0;"></div>
                 </div>
-                <div class="mockup-chart">
-                  <div class="mockup-bar-item" style="height: 35%;"></div>
-                  <div class="mockup-bar-item" style="height: 60%;"></div>
-                  <div class="mockup-bar-item" style="height: 45%;"></div>
-                  <div class="mockup-bar-item" style="height: 85%;"></div>
-                  <div class="mockup-bar-item" style="height: 70%;"></div>
-                  <div class="mockup-bar-item" style="height: 95%;"></div>
+                <div style="display: flex; align-items: flex-end; gap: 6px; height: 50px;">
+                  <div style="flex:1; height: 40%; background: #eff6ff; border-radius: 3px;"></div>
+                  <div style="flex:1; height: 65%; background: #dbeafe; border-radius: 3px;"></div>
+                  <div style="flex:1; height: 90%; background: #1470ef; border-radius: 3px;"></div>
+                  <div style="flex:1; height: 55%; background: #eff6ff; border-radius: 3px;"></div>
                 </div>
               </div>
             </div>
@@ -660,22 +893,21 @@
 
           <!-- Project 2 -->
           <div class="project-card" data-category="health">
-            <div class="project-preview" style="background: linear-gradient(135deg, #121c24 0%, #0d1217 100%);">
-              <div class="preview-mockup" style="border-color: rgba(6, 182, 212, 0.3);">
-                <div class="mockup-bar">
-                  <div class="mockup-dot" style="background: rgba(6, 182, 212, 0.4);"></div>
-                  <div class="mockup-dot"></div>
-                  <div class="mockup-dot"></div>
+            <div class="project-preview" style="background: #f0fdf4;">
+              <div class="project-mockup-sheet">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div style="font-size: 11px; font-weight: 600; color: #16a34a;">Vital Telemetry</div>
+                  <div style="width: 6px; height: 6px; border-radius: 50%; background: #16a34a;"></div>
                 </div>
-                <div style="display: flex; align-items: center; justify-content: space-around; height: 50px;">
-                  <div style="width: 28px; height: 28px; border-radius: 50%; border: 2px solid #06b6d4;"></div>
-                  <div style="width: 60px; height: 6px; background: rgba(255,255,255,0.2); border-radius: 3px;"></div>
+                <div style="display: flex; align-items: center; justify-content: space-around; height: 45px;">
+                  <div style="width: 28px; height: 28px; border-radius: 50%; border: 2px solid #16a34a;"></div>
+                  <div style="width: 60px; height: 6px; background: #dcfce7; border-radius: 3px;"></div>
                 </div>
               </div>
             </div>
             <div class="project-body">
               <div class="project-category-row">
-                <span class="project-tag" style="color: var(--accent-cyan);">HealthTech</span>
+                <span class="project-tag" style="color: #16a34a;">HealthTech</span>
                 <span class="project-metric">99.98% Uptime</span>
               </div>
               <h3 class="project-title">HealthPulse Telehealth</h3>
@@ -693,23 +925,21 @@
 
           <!-- Project 3 -->
           <div class="project-card" data-category="ecommerce">
-            <div class="project-preview" style="background: linear-gradient(135deg, #24181a 0%, #170d10 100%);">
-              <div class="preview-mockup" style="border-color: rgba(244, 63, 94, 0.3);">
-                <div class="mockup-bar">
-                  <div class="mockup-dot" style="background: rgba(244, 63, 94, 0.4);"></div>
-                  <div class="mockup-dot"></div>
-                  <div class="mockup-dot"></div>
+            <div class="project-preview" style="background: #fff1f2;">
+              <div class="project-mockup-sheet">
+                <div style="display: flex; gap: 4px;">
+                  <div style="width: 6px; height: 6px; border-radius: 50%; background: #fecdd3;"></div>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; height: 45px;">
-                  <div style="background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
-                  <div style="background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
-                  <div style="background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; height: 40px;">
+                  <div style="background: #ffe4e6; border-radius: 4px;"></div>
+                  <div style="background: #ffe4e6; border-radius: 4px;"></div>
+                  <div style="background: #f43f5e; border-radius: 4px;"></div>
                 </div>
               </div>
             </div>
             <div class="project-body">
               <div class="project-category-row">
-                <span class="project-tag" style="color: #fb7185;">E-Commerce</span>
+                <span class="project-tag" style="color: #e11d48;">E-Commerce</span>
                 <span class="project-metric">3.2x Faster</span>
               </div>
               <h3 class="project-title">OmniStore Headless</h3>
@@ -727,24 +957,21 @@
 
           <!-- Project 4 -->
           <div class="project-card" data-category="saas">
-            <div class="project-preview" style="background: linear-gradient(135deg, #191c28 0%, #0d0f17 100%);">
-              <div class="preview-mockup" style="border-color: rgba(99, 102, 241, 0.3);">
-                <div class="mockup-bar">
-                  <div class="mockup-dot" style="background: rgba(99, 102, 241, 0.4);"></div>
-                  <div class="mockup-dot"></div>
-                  <div class="mockup-dot"></div>
+            <div class="project-preview" style="background: #faf5ff;">
+              <div class="project-mockup-sheet">
+                <div style="display: flex; gap: 4px;">
+                  <div style="width: 6px; height: 6px; border-radius: 50%; background: #e9d5ff;"></div>
                 </div>
-                <div class="mockup-chart">
-                  <div class="mockup-bar-item" style="height: 50%; background: #6366f1;"></div>
-                  <div class="mockup-bar-item" style="height: 75%; background: #6366f1;"></div>
-                  <div class="mockup-bar-item" style="height: 90%; background: #6366f1;"></div>
-                  <div class="mockup-bar-item" style="height: 65%; background: #6366f1;"></div>
+                <div style="display: flex; align-items: flex-end; gap: 6px; height: 45px;">
+                  <div style="flex:1; height: 40%; background: #f3e8ff; border-radius: 3px;"></div>
+                  <div style="flex:1; height: 75%; background: #a855f7; border-radius: 3px;"></div>
+                  <div style="flex:1; height: 95%; background: #6b21a8; border-radius: 3px;"></div>
                 </div>
               </div>
             </div>
             <div class="project-body">
               <div class="project-category-row">
-                <span class="project-tag" style="color: var(--primary-indigo);">B2B SaaS</span>
+                <span class="project-tag" style="color: #9333ea;">B2B SaaS</span>
                 <span class="project-metric">10M+ Events/Day</span>
               </div>
               <h3 class="project-title">SaaS Metrics Engine</h3>
@@ -763,16 +990,13 @@
           <!-- Project 5 -->
           <div class="project-card" data-category="ai saas">
             <div class="project-preview">
-              <div class="preview-mockup">
-                <div class="mockup-bar">
-                  <div class="mockup-dot"></div>
-                  <div class="mockup-dot"></div>
-                  <div class="mockup-dot"></div>
+              <div class="project-mockup-sheet">
+                <div style="display: flex; gap: 4px;">
+                  <div style="width: 6px; height: 6px; border-radius: 50%; background: #e2e8f0;"></div>
                 </div>
-                <div style="display: flex; flex-direction: column; gap: 4px; justify-content: center; height: 50px;">
-                  <div style="height: 6px; width: 80%; background: rgba(255,255,255,0.2); border-radius: 3px;"></div>
-                  <div style="height: 6px; width: 60%; background: rgba(255,255,255,0.15); border-radius: 3px;"></div>
-                  <div style="height: 6px; width: 45%; background: #c084fc; border-radius: 3px;"></div>
+                <div style="display: flex; flex-direction: column; gap: 4px; justify-content: center; height: 45px;">
+                  <div style="height: 6px; width: 85%; background: #e2e8f0; border-radius: 3px;"></div>
+                  <div style="height: 6px; width: 60%; background: #1470ef; border-radius: 3px;"></div>
                 </div>
               </div>
             </div>
@@ -796,21 +1020,16 @@
 
           <!-- Project 6 -->
           <div class="project-card" data-category="saas fintech">
-            <div class="project-preview" style="background: linear-gradient(135deg, #18201a 0%, #0d140e 100%);">
-              <div class="preview-mockup" style="border-color: rgba(16, 185, 129, 0.3);">
-                <div class="mockup-bar">
-                  <div class="mockup-dot" style="background: rgba(16, 185, 129, 0.4);"></div>
-                  <div class="mockup-dot"></div>
-                  <div class="mockup-dot"></div>
-                </div>
+            <div class="project-preview" style="background: #f0fdfa;">
+              <div class="project-mockup-sheet">
                 <div style="display: flex; align-items: center; justify-content: center; height: 50px;">
-                  <div style="width: 40px; height: 40px; border-radius: 8px; border: 1px dashed #10b981; display: flex; align-items: center; justify-content: center; color: #10b981; font-size: 10px;">MAP</div>
+                  <div style="width: 38px; height: 38px; border-radius: 8px; border: 1.5px dashed #0d9488; display: flex; align-items: center; justify-content: center; color: #0d9488; font-size: 11px; font-weight: 600;">FLEET</div>
                 </div>
               </div>
             </div>
             <div class="project-body">
               <div class="project-category-row">
-                <span class="project-tag" style="color: var(--accent-emerald);">Logistics</span>
+                <span class="project-tag" style="color: #0d9488;">Logistics</span>
                 <span class="project-metric">50k+ Daily Trips</span>
               </div>
               <h3 class="project-title">Nexus Fleet Telematics</h3>
@@ -835,9 +1054,9 @@
     <section id="stack">
       <div class="container">
         <div class="section-header center">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            <span>Technology</span>
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
+            <span>Technology Stack</span>
           </div>
           <h2>A modern stack chosen for excellence.</h2>
           <p class="section-subtitle">
@@ -876,7 +1095,7 @@
           <!-- Tech 3 -->
           <div class="tech-card" data-category="frontend">
             <div class="tech-icon">
-              <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.66 18.25L10.3 8.16v8.44H8.62V5.75h1.72l7.36 10.1V5.75h1.66v12.5h-1.7z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#181818"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.66 18.25L10.3 8.16v8.44H8.62V5.75h1.72l7.36 10.1V5.75h1.66v12.5h-1.7z"/></svg>
             </div>
             <div class="tech-name">Next.js 14</div>
             <div class="tech-role">SSR / Fullstack</div>
@@ -972,8 +1191,8 @@
     <section>
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
             <span>Industry Expertise</span>
           </div>
           <h2>Domain mastery across regulated and consumer markets.</h2>
@@ -1042,8 +1261,8 @@
     <section id="reviews">
       <div class="container">
         <div class="section-header center">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
             <span>Social Proof</span>
           </div>
           <h2>Words from teams we've worked with.</h2>
@@ -1091,7 +1310,7 @@
               </p>
             </div>
             <div class="client-profile">
-              <div class="client-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">PM</div>
+              <div class="client-avatar" style="background: #1470ef;">PM</div>
               <div>
                 <div class="client-name">Priya Mehta</div>
                 <div class="client-role">Head of Product @ PulseHealth</div>
@@ -1114,7 +1333,7 @@
               </p>
             </div>
             <div class="client-profile">
-              <div class="client-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">DV</div>
+              <div class="client-avatar" style="background: #10b981;">DV</div>
               <div>
                 <div class="client-name">David Vance</div>
                 <div class="client-role">CTO @ CloudScale</div>
@@ -1126,13 +1345,13 @@
     </section>
 
     <!-- ==========================================================================
-         FAQ Accordion
+         FAQ Accordion (Salix Clean Light Cards)
          ========================================================================== -->
     <section id="faq">
       <div class="container">
         <div class="section-header center">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
             <span>Frequently Asked Questions</span>
           </div>
           <h2>Answers before you ask.</h2>
@@ -1247,8 +1466,8 @@
     <section id="contact">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
             <span>Get in Touch</span>
           </div>
           <h2>Let's build something remarkable.</h2>
@@ -1299,10 +1518,10 @@
               </div>
             </div>
 
-            <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: var(--space-5); margin-top: var(--space-4);">
-              <h4 style="margin-bottom: 8px;">Prefer an instant conversation?</h4>
-              <p style="font-size: 14px; margin-bottom: 14px;">Schedule a 15-minute technical discovery call directly with our engineering leadership.</p>
-              <button type="button" class="btn btn-secondary btn-sm open-call-modal">Book Discovery Call</button>
+            <div style="background: #ffffff; border: 1px solid var(--border-hairline); border-radius: var(--radius-xl); padding: var(--space-5); box-shadow: var(--shadow-sm); margin-top: var(--space-4);">
+              <h4 style="margin-bottom: 6px;">Prefer an instant conversation?</h4>
+              <p style="font-size: 14px; margin-bottom: 14px; color: var(--text-secondary);">Schedule a 15-minute technical discovery call directly with our engineering leadership.</p>
+              <button type="button" class="btn btn-dark btn-sm open-call-modal">Book Discovery Call</button>
             </div>
           </div>
 
@@ -1346,9 +1565,9 @@
                 <textarea id="projectScope" class="form-textarea" placeholder="Briefly describe what you're building, target launch timeline, and any key technical requirements..." required></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <button type="submit" class="btn btn-dark" style="width: 100%;">
                 <span>Send Project Inquiry</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <line x1="22" y1="2" x2="11" y2="13"></line>
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
@@ -1363,31 +1582,34 @@
   </main>
 
   <!-- ==========================================================================
-       Footer & Giant Watermark
+       Footer (Salix Clean Light Style)
        ========================================================================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
         <!-- Col 1 -->
         <div class="footer-brand-col">
-          <a href="#" class="brand-logo" style="margin-bottom: 12px;">
+          <a href="#" class="brand-logo" style="margin-bottom: 10px;">
             <div class="logo-symbol">
-              <svg viewBox="0 0 24 24"><path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                <path d="M14 4.5C14 3.12 15.12 2 16.5 2C17.88 2 19 3.12 19 4.5V11C19 12.66 20.34 14 22 14H27.5C28.88 14 30 15.12 30 16.5C30 17.88 28.88 19 27.5 19H20.5C19.17 19 17.9 18.47 16.96 17.54L14.46 15.04C13.53 14.1 13 12.83 13 11.5V6C13 5.17 13.4 4.5 14 4.5Z" fill="#1470ef"/>
+                <path d="M18 27.5C18 28.88 16.88 30 15.5 30C14.12 30 13 28.88 13 27.5V21C13 19.34 11.66 18 10 18H4.5C3.12 18 2 16.88 2 15.5C2 14.12 3.12 13 4.5 13H11.5C12.83 13 14.1 13.53 15.04 14.46L17.54 16.96C18.47 17.9 19 19.17 19 20.5V26C19 26.83 18.6 27.5 18 27.5Z" fill="#21ccee"/>
+              </svg>
             </div>
-            <span>SPARKNITY</span>
+            <span>Sparknity</span>
           </a>
           <p>
             An AI-first software engineering studio and digital product partner. Engineering the future, one product at a time.
           </p>
           <div class="footer-social-links">
             <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="Twitter">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="LinkedIn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
             <a href="https://github.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="GitHub">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
           </div>
         </div>
@@ -1439,11 +1661,6 @@
           <span>All systems operational · Accepting projects for Q3-Q4</span>
         </div>
       </div>
-
-      <!-- Giant Aesthetic Watermark matching Sparknity reference bottom -->
-      <div class="footer-giant-watermark" aria-hidden="true">
-        <span>SPARKNITY</span>
-      </div>
     </div>
   </footer>
 
@@ -1453,8 +1670,8 @@
   <div class="modal-overlay" id="callModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
       <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">&times;</button>
-      <div class="eyebrow" style="margin-bottom: 8px;">
-        <span class="eyebrow-dot"></span>
+      <div class="eyebrow-pill" style="margin-bottom: 8px;">
+        <span class="dot"></span>
         <span>15-Minute Technical Discovery</span>
       </div>
       <h3 id="modalTitle" style="font-size: 24px; margin-bottom: 12px;">Talk with a Senior Architect</h3>
@@ -1462,19 +1679,19 @@
         Pick a time that works for you. We'll discuss your technical requirements, architectural options, and preliminary sprint estimates.
       </p>
       
-      <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 20px; text-align: left; margin-bottom: 20px;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-          <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-emerald);"></div>
-          <span style="font-size: 14px; font-weight: 500;">Next available slot: Today at 2:00 PM PST</span>
+      <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: var(--radius-lg); padding: 18px; text-align: left; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+          <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--brand-emerald);"></div>
+          <span style="font-size: 13.5px; font-weight: 600; color: var(--text-primary);">Next available slot: Today at 2:00 PM PST</span>
         </div>
-        <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
+        <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
           • Direct 1-on-1 with Lead Engineer<br>
           • Architecture & Feasibility review<br>
           • No sales pitching, strictly technical
         </div>
       </div>
 
-      <a href="#contact" class="btn btn-primary" style="width: 100%;" onclick="document.getElementById('callModal').classList.remove('open');">
+      <a href="#contact" class="btn btn-dark" style="width: 100%;" onclick="document.getElementById('callModal').classList.remove('open');">
         Continue to Project Form
       </a>
     </div>
