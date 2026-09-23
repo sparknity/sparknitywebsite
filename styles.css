@@ -443,29 +443,81 @@ a {
   box-shadow: var(--shadow-card);
 }
 
-/* Ambient Rainbow Glow Wrapper for CTA */
-.btn-glow-wrapper {
+/* ==========================================================================
+   Salix Signature CTA Button with Spectrum Rim & Ambient Underlay Glow
+   ========================================================================== */
+.salix-cta-wrapper {
   position: relative;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-glow-underlay {
+/* Ambient Spectrum Glow diffused underneath */
+.salix-cta-glow {
   position: absolute;
-  top: 10px;
-  left: 15px;
-  right: 15px;
-  bottom: -4px;
-  background: var(--gradient-spectrum);
+  left: 50%;
+  bottom: -2px;
+  transform: translateX(-50%);
+  width: 72%;
+  height: 24px;
+  background: linear-gradient(90deg, #21ccee 0%, #1470ef 33.28%, #6927da 68.47%, #f23d94 100%);
   filter: blur(16px);
-  opacity: 0.55;
-  border-radius: var(--radius-pill);
-  transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+  border-radius: 9999px;
   pointer-events: none;
+  opacity: 0.95;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.btn-glow-wrapper:hover .btn-glow-underlay {
-  opacity: 0.85;
-  transform: scale(1.08);
+.salix-cta-wrapper:hover .salix-cta-glow {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.08);
+  filter: blur(18px);
+}
+
+/* Outer Spectrum Shell (Exposes crisp 1.4px gradient rim along bottom) */
+.salix-cta-btn {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 0 0 1.4px 0;
+  background: linear-gradient(90deg, #21ccee 0%, #1470ef 33.28%, #6927da 68.47%, #f23d94 100%);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.salix-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32);
+}
+
+/* Inner Solid Dark Pill with Pure White Typography */
+.salix-cta-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 13px 26px;
+  background: linear-gradient(180deg, #242226 -51%, #100202 18%, #100202 132%);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  white-space: nowrap;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.salix-cta-btn:hover .salix-cta-inner {
+  background: linear-gradient(180deg, #2a282d -51%, #150303 18%, #150303 132%);
 }
 
 /* ==========================================================================
