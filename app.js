@@ -367,4 +367,239 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ==========================================================================
+  // 10. Framer Motion Smooth Scroll (Lenis Engine)
+  // ==========================================================================
+  let lenisInstance = null;
+  if (typeof Lenis !== 'undefined') {
+    lenisInstance = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.8,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenisInstance.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Intercept in-page smooth anchor scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          lenisInstance.scrollTo(targetElement, {
+            offset: -72,
+            duration: 1.15
+          });
+        }
+      });
+    });
+  } else {
+    // Fallback standard smooth scroll
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }
+
+  // ==========================================================================
+  // 11. Framer Motion Text Reveal & Sentence Reveal Engine
+  // ==========================================================================
+  const textElements = document.querySelectorAll('.reveal-text');
+  textElements.forEach(el => {
+    const rawText = el.innerText.trim();
+    if (!rawText) return;
+    const words = rawText.split(/\s+/);
+
+    el.innerHTML = words.map((word, i) => {
+      return `<span class="reveal-mask"><span class="reveal-word" style="transition-delay: ${i * 42}ms">${word}</span></span>`;
+    }).join(' ');
+  });
+
+  const textObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const words = entry.target.querySelectorAll('.reveal-word');
+        words.forEach(word => word.classList.add('is-revealed'));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  textElements.forEach(el => textObserver.observe(el));
+
+  // Trigger hero headline immediately on load for breathtaking initial reveal
+  const heroTitle = document.querySelector('.hero-title.reveal-text');
+  if (heroTitle) {
+    setTimeout(() => {
+      const words = heroTitle.querySelectorAll('.reveal-word');
+      words.forEach(word => word.classList.add('is-revealed'));
+    }, 120);
+  }
+
+  // Sentence reveals
+  const sentenceElements = document.querySelectorAll('.reveal-sentence');
+  const sentenceObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -30px 0px'
+  });
+  sentenceElements.forEach(el => sentenceObserver.observe(el));
+
+  // ==========================================================================
+  // 12. Framer Motion Scroll Entrance & Stagger Engine
+  // ==========================================================================
+  // Stagger grid cards that might not have individual delay attributes
+  const autoStaggerGrids = [
+    '.services-grid',
+    '.projects-grid',
+    '.stack-grid',
+    '.testimonials-grid'
+  ];
+
+  autoStaggerGrids.forEach(selector => {
+    const grid = document.querySelector(selector);
+    if (grid) {
+      const children = Array.from(grid.children);
+      children.forEach((child, index) => {
+        if (!child.hasAttribute('data-reveal')) {
+          child.setAttribute('data-reveal', '');
+          const colIndex = index % 3;
+          child.setAttribute('data-delay', `${(colIndex + 1) * 100}`);
+        }
+      });
+    }
+  });
+
+  const revealItems = document.querySelectorAll('[data-reveal]');
+  const scrollObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+
+        // Sparkline animation trigger
+        const sparkline = entry.target.querySelector('.mockup-svg-sparkline') || (entry.target.classList.contains('mockup-svg-sparkline') ? entry.target : null);
+        if (sparkline) {
+          sparkline.classList.add('is-drawn');
+        }
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealItems.forEach(item => scrollObserver.observe(item));
+
+  // Also directly check hero items on load so above-the-fold reveals smoothly
+  setTimeout(() => {
+    document.querySelectorAll('.hero-section [data-reveal]').forEach(el => {
+      el.classList.add('is-revealed');
+      const sparkline = el.querySelector('.mockup-svg-sparkline');
+      if (sparkline) sparkline.classList.add('is-drawn');
+    });
+  }, 220);
+
+  // ==========================================================================
+  // 13. Dynamic Statistics Interpolation Counters
+  // ==========================================================================
+  const counters = document.querySelectorAll('.counter');
+  let hasAnimatedCounters = false;
+
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimatedCounters) {
+        hasAnimatedCounters = true;
+        counters.forEach(counter => {
+          const target = parseFloat(counter.getAttribute('data-target'));
+          const decimals = parseInt(counter.getAttribute('data-decimals') || '0', 10);
+          const duration = 1600; // ms
+          const startTime = performance.now();
+
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+            const currentVal = target * easeOutProgress;
+
+            counter.textContent = decimals > 0 
+              ? currentVal.toFixed(decimals) 
+              : Math.floor(currentVal).toString();
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.textContent = decimals > 0 ? target.toFixed(decimals) : target.toString();
+            }
+          }
+
+          requestAnimationFrame(updateCounter);
+        });
+        observer.disconnect();
+      }
+    });
+  }, {
+    threshold: 0.25
+  });
+
+  const statsGrid = document.querySelector('.stats-grid');
+  if (statsGrid) {
+    counterObserver.observe(statsGrid);
+  }
+
+  // ==========================================================================
+  // 14. Hero Software Mockup 3D Perspective Tilt Physics
+  // ==========================================================================
+  const heroMockup = document.querySelector('.hero-mockup-frame');
+  if (heroMockup && window.matchMedia('(pointer: fine)').matches) {
+    let isMoving = false;
+
+    heroMockup.addEventListener('mousemove', (e) => {
+      if (isMoving) return;
+      isMoving = true;
+
+      requestAnimationFrame(() => {
+        const rect = heroMockup.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -3; // subtle ±3deg tilt
+        const rotateY = ((x - centerX) / centerX) * 3;
+
+        heroMockup.style.transform = `perspective(1200px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
+        isMoving = false;
+      });
+    });
+
+    heroMockup.addEventListener('mouseleave', () => {
+      heroMockup.style.transition = 'transform 0.6s var(--ease-framer), box-shadow 0.4s var(--ease-framer)';
+      heroMockup.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg)';
+      setTimeout(() => {
+        heroMockup.style.transition = '';
+      }, 600);
+    });
+  }
 });
+
