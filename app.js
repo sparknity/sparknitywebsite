@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyEmailBtn = document.getElementById('copyEmailBtn');
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
-      const email = 'hello@sparknity.com';
+      const email = 'info@sparknity.com';
       const label = copyEmailBtn.querySelector('.copy-btn-label');
       navigator.clipboard.writeText(email).then(() => {
         copyEmailBtn.classList.add('copied');
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (label) label.textContent = 'Copy';
         }, 2200);
       }).catch(() => {
-        if (label) label.textContent = 'hello@sparknity.com';
+        if (label) label.textContent = 'info@sparknity.com';
       });
     });
   }
