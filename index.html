@@ -43,8 +43,7 @@
 
       <!-- Desktop Action Buttons -->
       <div class="nav-actions">
-        <a href="#contact" class="nav-link nav-link-contact">Contact</a>
-        <button type="button" class="btn btn-dark btn-nav-cta open-call-modal">Book a Call</button>
+        <a href="#contact" class="btn btn-dark btn-nav-cta">Contact Us</a>
       </div>
 
       <!-- Mobile Hamburger Toggle -->
@@ -1356,21 +1355,10 @@
                 </div>
               </div>
 
-              <!-- Row 2: Company & Timeline -->
-              <div class="form-row-2col">
-                <div class="form-group-lux">
-                  <label class="form-label-lux" for="clientCompany">Company or Project</label>
-                  <input type="text" id="clientCompany" class="form-input-lux" placeholder="Acme Inc. / Stealth">
-                </div>
-                <div class="form-group-lux">
-                  <label class="form-label-lux" for="projectTimeline">Target Launch</label>
-                  <select id="projectTimeline" class="form-input-lux form-select-lux">
-                    <option value="immediate">Immediate (&lt; 4 weeks)</option>
-                    <option value="1-3-months" selected>1 – 3 Months</option>
-                    <option value="quarter">Next Quarter</option>
-                    <option value="exploring">Just Exploring Feasibility</option>
-                  </select>
-                </div>
+              <!-- Row 2: Company or Project Name -->
+              <div class="form-group-lux">
+                <label class="form-label-lux" for="clientCompany">Company or Project</label>
+                <input type="text" id="clientCompany" class="form-input-lux" placeholder="Acme Inc. / Stealth">
               </div>
 
               <!-- Row 3: Project Type Segmented Selection -->
@@ -1396,10 +1384,10 @@
                 </div>
               </div>
 
-              <!-- Row 5: Detailed Project Scope -->
+              <!-- Row 5: Detailed Project Scope (Optional) -->
               <div class="form-group-lux">
-                <label class="form-label-lux" for="projectScope">Project Brief &amp; Goals <span class="req-star">*</span></label>
-                <textarea id="projectScope" class="form-textarea-lux" placeholder="Describe what you're building, key technical requirements, existing stack (if any), and desired outcomes..." required></textarea>
+                <label class="form-label-lux" for="projectScope">Project Brief &amp; Goals <span style="font-size: 12px; font-weight: 400; color: #94a3b8; margin-left: 4px;">(Optional)</span></label>
+                <textarea id="projectScope" class="form-textarea-lux" placeholder="Describe what you're building, key technical requirements, existing stack (if any), and desired outcomes..."></textarea>
               </div>
 
               <!-- Row 6: Submit CTA & Security Footnote -->
