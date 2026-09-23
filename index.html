@@ -23,15 +23,6 @@
   <!-- Signature Top Spectrum Stripe (Salix Exact 8px Rainbow Edge) -->
   <div class="top-spectrum-bar"></div>
 
-  <!-- Technical Metric Ticks on Right Margin -->
-  <div class="margin-ticks-strip" aria-hidden="true">
-    <span>— 100K</span>
-    <span>— 70K</span>
-    <span>— 50K</span>
-    <span>— 30K</span>
-    <span>— 0</span>
-  </div>
-
   <!-- ==========================================================================
        Header & Floating Pill Navigation (Salix Floating Nav Style)
        ========================================================================== -->
@@ -50,6 +41,7 @@
         <li><a href="#work" class="nav-link">Work</a></li>
         <li><a href="#stack" class="nav-link">Stack</a></li>
         <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
         <li><a href="#faq" class="nav-link">FAQ</a></li>
       </ul>
 
@@ -78,6 +70,7 @@
     <a href="#work" class="mobile-nav-link"><span>Work</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
     <a href="#stack" class="mobile-nav-link"><span>Stack</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
     <a href="#reviews" class="mobile-nav-link"><span>Reviews</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+    <a href="#pricing" class="mobile-nav-link"><span>Pricing</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
     <a href="#faq" class="mobile-nav-link"><span>FAQ</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
     <a href="#contact" class="mobile-nav-link"><span>Contact</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
     <button type="button" class="btn btn-dark open-call-modal" style="width: 100%; justify-content: center; margin-top: 14px; padding: 13px 20px; font-size: 15px; border-radius: 9999px;">Book a Discovery Call</button>
@@ -473,14 +466,14 @@
     </section>
 
     <!-- ==========================================================================
-         Services Section (10 Core Disciplines)
+         Interactive Vertical Tabs Section (Salix Signature Layout)
          ========================================================================== -->
-    <section id="services">
+    <section id="services" class="vertical-tabs-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header center">
           <div class="eyebrow-pill" data-reveal>
             <span class="dot"></span>
-            <span>Services</span>
+            <span>Core Disciplines</span>
           </div>
           <h2 class="reveal-text">Everything you need to design, build and ship modern software.</h2>
           <p class="section-subtitle" data-reveal data-delay="100">
@@ -488,224 +481,219 @@
           </p>
         </div>
 
-        <div class="services-grid">
-          <!-- Card 1 -->
-          <div class="service-card">
-            <div>
-              <div class="service-header-row">
-                <div class="service-icon-wrap">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                  </svg>
-                </div>
-                <span class="service-num">01</span>
+        <div class="vertical-tabs-grid" data-reveal>
+          <!-- Left Column: 3 Interactive Tabs -->
+          <div class="vertical-tabs-left">
+            <div class="vertical-tab-item active" data-tab="tab-web">
+              <div class="vertical-tab-indicator">01</div>
+              <div>
+                <h3 class="vertical-tab-title">Full-Stack Web Apps & SaaS</h3>
+                <p class="vertical-tab-desc">High-performance web applications built on Next.js, React, Node.js, and TypeScript. Optimized for sub-second speeds, flawless SEO, and responsive fidelity.</p>
               </div>
-              <h3 class="service-title">Full-Stack Web Apps</h3>
-              <p class="service-desc">
-                High-performance web applications built on Next.js, React, Node.js, and TypeScript. Optimized for sub-second speeds, flawless SEO, and responsive fidelity.
-              </p>
             </div>
-            <div class="service-tags">
-              <span class="service-tag">Next.js</span>
-              <span class="service-tag">React</span>
-              <span class="service-tag">TypeScript</span>
-              <span class="service-tag">Tailwind</span>
+
+            <div class="vertical-tab-item" data-tab="tab-ai">
+              <div class="vertical-tab-indicator">02</div>
+              <div>
+                <h3 class="vertical-tab-title">AI Systems & Intelligent Agents</h3>
+                <p class="vertical-tab-desc">Custom LLM integrations, autonomous multi-agent workflows, RAG knowledge retrieval, fine-tuned models, and embedding pipelines that automate mission-critical tasks.</p>
+              </div>
             </div>
+
+            <div class="vertical-tab-item" data-tab="tab-mobile">
+              <div class="vertical-tab-indicator">03</div>
+              <div>
+                <h3 class="vertical-tab-title">Cross-Platform Mobile Apps</h3>
+                <p class="vertical-tab-desc">Native-grade iOS & Android applications built with Flutter and React Native. Smooth 60fps gesture physics, push notifications, and offline-first data sync.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Dynamic Preview Container -->
+          <div class="vertical-tab-preview-wrap">
+            <!-- Pane 1: Full-Stack Web Apps -->
+            <div class="v-tab-pane active" id="tab-web">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-hairline);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #10b981;"></span>
+                  <span style="font-weight: 600; font-size: 14px; color: var(--text-primary);">Production App Dashboard</span>
+                </div>
+                <span class="project-tag" style="margin: 0; background: #eff6ff; color: #1470ef;">Next.js 14 · Live</span>
+              </div>
+              <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 20px;">
+                <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: 12px; padding: 20px;">
+                  <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 6px;">Global Edge Latency</div>
+                  <div style="font-size: 28px; font-weight: 700; color: var(--text-primary); font-family: var(--font-heading); margin-bottom: 12px;">38ms <span style="font-size: 13px; color: #10b981; font-weight: 600;">-64% faster</span></div>
+                  <div style="display: flex; align-items: flex-end; gap: 6px; height: 50px;">
+                    <div style="flex:1; height: 40%; background: #e2e8f0; border-radius: 3px;"></div>
+                    <div style="flex:1; height: 60%; background: #e2e8f0; border-radius: 3px;"></div>
+                    <div style="flex:1; height: 85%; background: #3b82f6; border-radius: 3px;"></div>
+                    <div style="flex:1; height: 45%; background: #e2e8f0; border-radius: 3px;"></div>
+                    <div style="flex:1; height: 95%; background: #1470ef; border-radius: 3px;"></div>
+                  </div>
+                </div>
+                <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+                  <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 6px;">Lighthouse Score</div>
+                  <div style="font-size: 36px; font-weight: 800; color: #10b981; font-family: var(--font-heading);">100</div>
+                  <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Zero CLS · Sub-sec FCP</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span class="service-tag">Next.js App Router</span>
+                <span class="service-tag">TypeScript</span>
+                <span class="service-tag">Tailwind CSS</span>
+                <span class="service-tag">Edge Caching</span>
+              </div>
+            </div>
+
+            <!-- Pane 2: AI Systems & Agents -->
+            <div class="v-tab-pane" id="tab-ai">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-hairline);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #8b5cf6;"></span>
+                  <span style="font-weight: 600; font-size: 14px; color: var(--text-primary);">Autonomous Multi-Agent Pipeline</span>
+                </div>
+                <span class="project-tag" style="margin: 0; background: #faf5ff; color: #8b5cf6;">Active Runtime</span>
+              </div>
+              <div style="background: #18191f; border-radius: 12px; padding: 20px; margin-bottom: 20px; color: #f8fafc;">
+                <div style="display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 12px;">
+                  <span>Task: Vector RAG & Code Synthesis</span>
+                  <span style="color: #34d399;">Streaming · 128 tok/s</span>
+                </div>
+                <div style="font-family: monospace; font-size: 13px; line-height: 1.6; color: #e2e8f0; background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                  <span style="color: #60a5fa;">&gt; Agent[Router]</span> parsed user intent in 22ms<br>
+                  <span style="color: #c084fc;">&gt; Agent[Embedder]</span> cosine search across 450k chunks<br>
+                  <span style="color: #34d399;">&gt; Agent[Synthesizer]</span> verified response schema (Confidence: 99.4%)
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span class="service-tag">OpenAI GPT-4o</span>
+                <span class="service-tag">Claude 3.5 Sonnet</span>
+                <span class="service-tag">Pinecone Vector DB</span>
+                <span class="service-tag">LangGraph</span>
+              </div>
+            </div>
+
+            <!-- Pane 3: Mobile Apps -->
+            <div class="v-tab-pane" id="tab-mobile">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-hairline);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #06b6d4;"></span>
+                  <span style="font-weight: 600; font-size: 14px; color: var(--text-primary);">Cross-Platform Flutter & Native Core</span>
+                </div>
+                <span class="project-tag" style="margin: 0; background: #ecfeff; color: #0891b2;">iOS & Android</span>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+                <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: 12px; padding: 20px;">
+                  <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 6px;">Frame Rate Fidelity</div>
+                  <div style="font-size: 32px; font-weight: 700; color: #0891b2; font-family: var(--font-heading);">60 FPS</div>
+                  <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Zero stutter gesture animations</div>
+                </div>
+                <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: 12px; padding: 20px;">
+                  <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 6px;">Offline Sync</div>
+                  <div style="font-size: 32px; font-weight: 700; color: #10b981; font-family: var(--font-heading);">100%</div>
+                  <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">WatermelonDB background sync</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span class="service-tag">Flutter 3.x</span>
+                <span class="service-tag">React Native</span>
+                <span class="service-tag">App Store SLA</span>
+                <span class="service-tag">Biometric Auth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Salix Signature Dark Capabilities Section (High-Contrast Interlude)
+         ========================================================================== -->
+    <section class="salix-dark-section">
+      <div class="container">
+        <div class="section-header center">
+          <div class="eyebrow-pill" data-reveal>
+            <span class="dot"></span>
+            <span>Enterprise Engine</span>
+          </div>
+          <h2 class="reveal-text" style="color: #ffffff !important;">Engineered for speed, resilience, and scale.</h2>
+          <p class="section-subtitle" data-reveal data-delay="100" style="color: rgba(255, 255, 255, 0.65);">
+            Under the hood, we construct robust architectural foundations that ensure your platform handles million-user spikes effortlessly.
+          </p>
+        </div>
+
+        <div class="dark-bento-grid" data-reveal>
+          <!-- Card 1 -->
+          <div class="dark-bento-card">
+            <div class="dark-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <h3 class="dark-card-title">Real-Time Data Sync</h3>
+            <p class="dark-card-desc">Sub-millisecond event streaming, WebSocket multiplexing, and distributed cache invalidation for instantaneous multi-client synchronization.</p>
           </div>
 
           <!-- Card 2 -->
-          <div class="service-card">
-            <div>
-              <div class="service-header-row">
-                <div class="service-icon-wrap">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                  </svg>
-                </div>
-                <span class="service-num">02</span>
-              </div>
-              <h3 class="service-title">Mobile Applications</h3>
-              <p class="service-desc">
-                Native-grade iOS & Android applications built with Flutter and React Native. Smooth 60fps gesture physics, push notifications, and offline-first data sync.
-              </p>
+          <div class="dark-bento-card">
+            <div class="dark-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
             </div>
-            <div class="service-tags">
-              <span class="service-tag">Flutter</span>
-              <span class="service-tag">React Native</span>
-              <span class="service-tag">iOS</span>
-              <span class="service-tag">Android</span>
-            </div>
+            <h3 class="dark-card-title">Automated CI/CD Pipelines</h3>
+            <p class="dark-card-desc">Zero-downtime blue/green rollouts, isolated ephemeral staging branches for every pull request, and automatic rollback triggers.</p>
           </div>
 
           <!-- Card 3 -->
-          <div class="service-card" style="border-color: rgba(20, 112, 239, 0.4);">
-            <div>
-              <div class="service-header-row">
-                <div class="service-icon-wrap" style="background: #1470ef; color: #ffffff;">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm1-5.5a2 2 0 0 0-4 0v1h4z"></path>
-                  </svg>
-                </div>
-                <span class="service-num" style="color: var(--brand-blue);">03 · AI First</span>
-              </div>
-              <h3 class="service-title">AI & Machine Learning</h3>
-              <p class="service-desc">
-                Custom LLM integrations, autonomous multi-agent workflows, RAG knowledge retrieval, fine-tuned models, and embedding pipelines that automate mission-critical tasks.
-              </p>
+          <div class="dark-bento-card">
+            <div class="dark-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
             </div>
-            <div class="service-tags">
-              <span class="service-tag">OpenAI</span>
-              <span class="service-tag">Claude</span>
-              <span class="service-tag">LangChain</span>
-              <span class="service-tag">Pinecone</span>
-            </div>
+            <h3 class="dark-card-title">Bank-Grade SOC2 Security</h3>
+            <p class="dark-card-desc">End-to-end TLS 1.3 encryption, automated secret rotation, penetration test reports, and HIPAA / SOC2 compliance readiness.</p>
           </div>
 
           <!-- Card 4 -->
-          <div class="service-card">
-            <div>
-              <div class="service-header-row">
-                <div class="service-icon-wrap">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"></path>
-                  </svg>
-                </div>
-                <span class="service-num">04</span>
-              </div>
-              <h3 class="service-title">UI/UX & Product Design</h3>
-              <p class="service-desc">
-                Tokenized design systems, clickable high-fidelity Figma prototypes, comprehensive user research, and micro-interactions engineered for conversion.
-              </p>
+          <div class="dark-bento-card">
+            <div class="dark-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
             </div>
-            <div class="service-tags">
-              <span class="service-tag">Figma</span>
-              <span class="service-tag">Design Systems</span>
-              <span class="service-tag">Wireframing</span>
-              <span class="service-tag">Prototypes</span>
-            </div>
+            <h3 class="dark-card-title">Microservices & Event Mesh</h3>
+            <p class="dark-card-desc">Decoupled event-driven microservices built on Kafka and RabbitMQ, guaranteeing graceful degradation and fault-tolerant scaling.</p>
           </div>
 
           <!-- Card 5 -->
-          <div class="service-card">
-            <div>
-              <div class="service-header-row">
-                <div class="service-icon-wrap">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                  </svg>
-                </div>
-                <span class="service-num">05</span>
-              </div>
-              <h3 class="service-title">Cloud Architecture & DevOps</h3>
-              <p class="service-desc">
-                AWS & GCP cloud engineering, automated CI/CD pipelines, Docker containerization, Kubernetes clusters, and infrastructure as code with Terraform.
-              </p>
+          <div class="dark-bento-card">
+            <div class="dark-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
             </div>
-            <div class="service-tags">
-              <span class="service-tag">AWS</span>
-              <span class="service-tag">Docker</span>
-              <span class="service-tag">Kubernetes</span>
-              <span class="service-tag">CI/CD</span>
-            </div>
+            <h3 class="dark-card-title">Global Edge Deployment</h3>
+            <p class="dark-card-desc">Static and server-rendered assets served within 50ms of 95% of the world's population via multi-region edge serverless compute.</p>
           </div>
 
           <!-- Card 6 -->
-          <div class="service-card">
-            <div>
-              <div class="service-header-row">
-                <div class="service-icon-wrap">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
-                  </svg>
-                </div>
-                <span class="service-num">06</span>
-              </div>
-              <h3 class="service-title">APIs & Distributed Backends</h3>
-              <p class="service-desc">
-                High-throughput REST and GraphQL APIs, event-driven messaging with Kafka/RabbitMQ, real-time WebSockets, and resilient relational & vector databases.
-              </p>
+          <div class="dark-bento-card">
+            <div class="dark-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
             </div>
-            <div class="service-tags">
-              <span class="service-tag">GraphQL</span>
-              <span class="service-tag">Node.js</span>
-              <span class="service-tag">Python</span>
-              <span class="service-tag">PostgreSQL</span>
-            </div>
-          </div>
-
-          <!-- Card 7 -->
-          <div class="service-card">
-            <div>
-              <div class="service-header-row">
-                <div class="service-icon-wrap">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-                  </svg>
-                </div>
-                <span class="service-num">07</span>
-              </div>
-              <h3 class="service-title">Rapid MVP Prototyping</h3>
-              <p class="service-desc">
-                Go from napkin sketch to venture-ready, production-grade MVP in 4 to 6 weeks. Built on scalable foundations so you don't throw away code after fundraising.
-              </p>
-            </div>
-            <div class="service-tags">
-              <span class="service-tag">4-6 Weeks</span>
-              <span class="service-tag">Venture Ready</span>
-              <span class="service-tag">Zero Bloat</span>
-            </div>
-          </div>
-
-          <!-- Card 8 -->
-          <div class="service-card">
-            <div>
-              <div class="service-header-row">
-                <div class="service-icon-wrap">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                  </svg>
-                </div>
-                <span class="service-num">08</span>
-              </div>
-              <h3 class="service-title">Technical Strategy & Audits</h3>
-              <p class="service-desc">
-                Fractional CTO leadership, code quality audits, security compliance reviews, and technical roadmapping to ensure you de-risk your technology investments.
-              </p>
-            </div>
-            <div class="service-tags">
-              <span class="service-tag">CTO Advisory</span>
-              <span class="service-tag">Architecture</span>
-              <span class="service-tag">Audits</span>
-            </div>
-          </div>
-
-          <!-- Card 9 -->
-          <div class="service-card">
-            <div>
-              <div class="service-header-row">
-                <div class="service-icon-wrap">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <span class="service-num">09</span>
-              </div>
-              <h3 class="service-title">Maintenance & Sprints</h3>
-              <p class="service-desc">
-                Ongoing monthly engineering retainers, 24/7 uptime monitoring, critical security patching, performance tuning, and continuous feature expansion.
-              </p>
-            </div>
-            <div class="service-tags">
-              <span class="service-tag">24/7 SLA</span>
-              <span class="service-tag">Monitoring</span>
-              <span class="service-tag">Retainers</span>
-            </div>
+            <h3 class="dark-card-title">100% IP & Zero Lock-In</h3>
+            <p class="dark-card-desc">Complete code ownership, clean architecture standards, modular typing, and comprehensive developer documentation for seamless handover.</p>
           </div>
         </div>
       </div>
@@ -1238,6 +1226,9 @@
     <!-- ==========================================================================
          Testimonials / Reviews
          ========================================================================== -->
+    <!-- ==========================================================================
+         Asymmetric Colored Review Bento Grid (Salix Signature Layout)
+         ========================================================================== -->
     <section id="reviews">
       <div class="container">
         <div class="section-header center">
@@ -1245,24 +1236,33 @@
             <span class="dot"></span>
             <span>Social Proof</span>
           </div>
-          <h2 class="reveal-text">Words from teams we've worked with.</h2>
+          <h2 class="reveal-text">Words from teams we've shipped with.</h2>
           <p class="section-subtitle" data-reveal data-delay="100">
-            From venture-backed founders to enterprise engineering directors, here is what partners say about shipping with Sparknity.
+            From venture-backed founders to enterprise engineering directors, here is what partners say about building with Sparknity.
           </p>
         </div>
 
-        <div class="testimonials-grid">
-          <!-- Review 1 -->
-          <div class="testimonial-card">
+        <div class="review-bento-grid" data-reveal>
+          <!-- Card 1: Vivid Magenta Feature Card -->
+          <div class="review-card-magenta">
+            <div class="review-big-num">99%</div>
+            <div class="review-stat-label">On-Time Sprint Delivery</div>
+            <p style="font-size: 13.5px; opacity: 0.9; margin-top: 12px; line-height: 1.5;">
+              Every milestone scoped with precision and delivered predictably with zero compromise on code quality.
+            </p>
+          </div>
+
+          <!-- Card 2: Client Quote (Alex Rivera) -->
+          <div class="review-card-quote">
             <div>
-              <div class="rating-stars">
+              <div class="rating-stars" style="margin-bottom: 14px;">
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
-              <p class="testimonial-quote">
+              <p class="testimonial-quote" style="margin-bottom: 20px;">
                 "Sparknity felt like an organic extension of our core team. They delivered our MVP two weeks ahead of schedule, and the code quality blew our seed investors away."
               </p>
             </div>
@@ -1275,17 +1275,26 @@
             </div>
           </div>
 
-          <!-- Review 2 -->
-          <div class="testimonial-card">
+          <!-- Card 3: Cobalt Blue Feature Card -->
+          <div class="review-card-blue">
+            <div class="review-big-num">20+</div>
+            <div class="review-stat-label">Products Launched</div>
+            <p style="font-size: 13.5px; opacity: 0.9; margin-top: 12px; line-height: 1.5;">
+              Venture-backed startups and growth enterprises scaled seamlessly from zero to millions of users.
+            </p>
+          </div>
+
+          <!-- Card 4: Client Quote (Priya Mehta) -->
+          <div class="review-card-quote">
             <div>
-              <div class="rating-stars">
+              <div class="rating-stars" style="margin-bottom: 14px;">
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
-              <p class="testimonial-quote">
+              <p class="testimonial-quote" style="margin-bottom: 20px;">
                 "The attention to design detail and micro-interactions is world class. Our customer conversion rate rose 42% following the launch of their revamped web app."
               </p>
             </div>
@@ -1298,17 +1307,26 @@
             </div>
           </div>
 
-          <!-- Review 3 -->
-          <div class="testimonial-card">
+          <!-- Card 5: White Metric Card -->
+          <div class="review-card-metric-white">
+            <div class="review-metric-white-num">4.9/5</div>
+            <div class="review-stat-label" style="color: var(--text-secondary);">Average Client Rating</div>
+            <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 10px; line-height: 1.5;">
+              Across 30+ enterprise reviews and long-term retainer partnerships.
+            </p>
+          </div>
+
+          <!-- Card 6: Client Quote (David Vance) -->
+          <div class="review-card-quote">
             <div>
-              <div class="rating-stars">
+              <div class="rating-stars" style="margin-bottom: 14px;">
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
-              <p class="testimonial-quote">
+              <p class="testimonial-quote" style="margin-bottom: 20px;">
                 "Scaling to 100k daily active users was smooth because of the robust microservices architecture Sparknity designed from day zero."
               </p>
             </div>
@@ -1325,115 +1343,188 @@
     </section>
 
     <!-- ==========================================================================
-         FAQ Accordion (Salix Clean Light Cards)
+         Pricing & Engagement Sprints (Salix Layout)
          ========================================================================== -->
-    <section id="faq">
+    <section id="pricing" style="padding: 100px 0; background: #fafafa; border-top: 1px solid var(--border-hairline);">
       <div class="container">
         <div class="section-header center">
           <div class="eyebrow-pill" data-reveal>
             <span class="dot"></span>
-            <span>Frequently Asked Questions</span>
+            <span>Transparent Pricing</span>
           </div>
-          <h2 class="reveal-text">Answers before you ask.</h2>
+          <h2 class="reveal-text">Simple, predictable sprint pricing.</h2>
           <p class="section-subtitle" data-reveal data-delay="100">
-            Everything you need to know about our sprints, pricing model, IP ownership, and workflow.
+            Pause or cancel anytime. Senior engineering squad on demand with zero long-term payroll lock-in.
           </p>
+
+          <!-- Monthly / Quarterly Switch -->
+          <div class="pricing-switch-wrap" data-reveal data-delay="150">
+            <span>Billed Monthly</span>
+            <div class="pricing-switch" id="pricingSwitch" role="button" aria-label="Toggle quarterly billing discount">
+              <div class="pricing-switch-knob"></div>
+            </div>
+            <span>Billed Quarterly</span>
+            <span class="pricing-discount-badge">SAVE 20%</span>
+          </div>
         </div>
 
-        <div class="faq-container" data-reveal>
-          <!-- FAQ 1 -->
-          <div class="faq-item active">
-            <button type="button" class="faq-trigger" aria-expanded="true">
-              <span>What is your typical project delivery timeline?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-body">
-              <p>
-                Most standalone MVPs and core product builds launch within 4 to 8 weeks. Larger multi-platform enterprise software solutions typically run across 2 to 4 months organized into transparent 1-week iterative sprints.
-              </p>
+        <div class="pricing-grid" data-reveal>
+          <!-- Plan 1 -->
+          <div class="pricing-card">
+            <div>
+              <div class="pricing-plan-name">Starter Sprint</div>
+              <div class="pricing-plan-desc">For seed startups and rapid proof-of-concept validation.</div>
+              <div class="pricing-price-row">
+                <span class="pricing-amount" data-monthly="3,900" data-quarterly="3,120">$3,900</span>
+                <span class="pricing-period">/ month</span>
+              </div>
+              <ul class="pricing-feature-list">
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> 1 dedicated senior engineer</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> 1-week iterative sprints</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Next.js or React Native stack</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Staging branch deployments</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Async updates & weekly demo</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Pause or cancel anytime</li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-secondary" style="width: 100%;">Get Started</a>
+          </div>
+
+          <!-- Plan 2: Most Popular -->
+          <div class="pricing-card popular">
+            <span class="popular-badge">Most Popular</span>
+            <div>
+              <div class="pricing-plan-name">Growth Pod</div>
+              <div class="pricing-plan-desc">Full multidisciplinary squad to build and scale your product.</div>
+              <div class="pricing-price-row">
+                <span class="pricing-amount" data-monthly="7,900" data-quarterly="6,320">$7,900</span>
+                <span class="pricing-period">/ month</span>
+              </div>
+              <ul class="pricing-feature-list">
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Lead architect + Senior fullstack + UI/UX</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> AI & LLM pipeline development</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Dedicated private Slack channel</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Unlimited backlog requests & revisions</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> 48-hour sprint turnarounds</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Complete code & IP ownership</li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-dark" style="width: 100%;">Choose Growth Pod</a>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="pricing-card">
+            <div>
+              <div class="pricing-plan-name">Enterprise Scale</div>
+              <div class="pricing-plan-desc">For high-throughput systems requiring custom architectures.</div>
+              <div class="pricing-price-row">
+                <span class="pricing-amount" data-monthly="14,900" data-quarterly="11,920">$14,900</span>
+                <span class="pricing-period">/ month</span>
+              </div>
+              <ul class="pricing-feature-list">
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Complete engineering pod + DevOps</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Bank-grade SOC2 & HIPAA audits</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Multi-region Kubernetes infrastructure</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> 24/7 incident response SLA</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Executive advisory & CTO fractional</li>
+                <li class="pricing-feature-item"><span class="pricing-feature-dot"></span> Custom contract & NDA terms</li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-secondary" style="width: 100%;">Contact Enterprise</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ Accordion (Salix 2-Column Sticky Layout)
+         ========================================================================== -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="faq-2col-grid">
+          <!-- Left Column: Sticky Title & Help Box -->
+          <div class="faq-sticky-col">
+            <div class="eyebrow-pill" data-reveal>
+              <span class="dot"></span>
+              <span>FAQ</span>
+            </div>
+            <h2 class="reveal-text" style="font-size: clamp(28px, 3.2vw, 38px); margin: 16px 0 12px 0;">Answers before you ask.</h2>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+              Everything you need to know about our sprints, pricing, IP ownership, and communication workflow.
+            </p>
+            <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: 14px; padding: 20px;">
+              <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: var(--text-primary);">Have a specific question?</div>
+              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">We're happy to discuss your custom requirements directly.</p>
+              <a href="#contact" class="btn btn-secondary btn-sm" style="width: 100%; text-align: center;">Get in Touch</a>
             </div>
           </div>
 
-          <!-- FAQ 2 -->
-          <div class="faq-item">
-            <button type="button" class="faq-trigger" aria-expanded="false">
-              <span>How does your pricing & engagement model work?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-body">
-              <p>
-                We offer two models: (1) Milestone-based fixed pricing for clearly defined MVP deliverables, or (2) Dedicated monthly engineering pods on a predictable sprint retainer for ongoing feature expansion and scaling.
-              </p>
+          <!-- Right Column: Accordion Items -->
+          <div class="faq-list" data-reveal>
+            <!-- FAQ 1 -->
+            <div class="faq-item active">
+              <button type="button" class="faq-trigger" aria-expanded="true">
+                <span>What is your typical project delivery timeline?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>Most standalone MVPs and core product builds launch within 4 to 8 weeks. Larger multi-platform enterprise software solutions typically run across 2 to 4 months organized into transparent 1-week iterative sprints.</p>
+              </div>
             </div>
-          </div>
 
-          <!-- FAQ 3 -->
-          <div class="faq-item">
-            <button type="button" class="faq-trigger" aria-expanded="false">
-              <span>Who will I be working with directly?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-body">
-              <p>
-                You work directly with senior software architects and lead product designers. We have eliminated middle-management layers and account coordinators so that communications remain technically rigorous and direct.
-              </p>
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>How does your pricing & engagement model work?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>We offer two models: (1) Milestone-based fixed pricing for clearly defined MVP deliverables, or (2) Dedicated monthly engineering pods on a predictable sprint retainer for ongoing feature expansion and scaling.</p>
+              </div>
             </div>
-          </div>
 
-          <!-- FAQ 4 -->
-          <div class="faq-item">
-            <button type="button" class="faq-trigger" aria-expanded="false">
-              <span>Who owns the source code and Intellectual Property?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-body">
-              <p>
-                You own 100% of all code, Figma design assets, databases, and IP from day one. Everything is committed directly into your private GitHub/GitLab repositories under standard commercial licenses with no vendor lock-in.
-              </p>
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>Who will I be working with directly?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>You work directly with senior software architects and lead product designers. We have eliminated middle-management layers and account coordinators so that communications remain technically rigorous and direct.</p>
+              </div>
             </div>
-          </div>
 
-          <!-- FAQ 5 -->
-          <div class="faq-item">
-            <button type="button" class="faq-trigger" aria-expanded="false">
-              <span>Can you integrate with our existing codebase or engineers?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-body">
-              <p>
-                Yes. We regularly augment existing engineering teams, perform architecture overhauls, migrate legacy backends to modern cloud infrastructure, and build standalone microservices that interface with existing APIs.
-              </p>
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>Who owns the source code and Intellectual Property?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>You own 100% of all code, Figma design assets, databases, and IP from day one. Everything is committed directly into your private GitHub/GitLab repositories under standard commercial licenses with no vendor lock-in.</p>
+              </div>
             </div>
-          </div>
 
-          <!-- FAQ 6 -->
-          <div class="faq-item">
-            <button type="button" class="faq-trigger" aria-expanded="false">
-              <span>What post-launch support and guarantees do you offer?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-body">
-              <p>
-                Every deployment includes a 30-day hypercare bug-fix warranty. Afterwards, clients can transition to our proactive maintenance tiers for continuous SLA uptime monitoring, database maintenance, and feature enhancements.
-              </p>
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>Can you integrate with our existing codebase or engineers?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>Yes. We regularly augment existing engineering teams, perform architecture overhauls, migrate legacy backends to modern cloud infrastructure, and build standalone microservices that interface with existing APIs.</p>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>What post-launch support and guarantees do you offer?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-body">
+                <p>Every deployment includes a 30-day hypercare bug-fix warranty. Afterwards, clients can transition to our proactive maintenance tiers for continuous SLA uptime monitoring, database maintenance, and feature enhancements.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1559,6 +1650,67 @@
         </div>
       </div>
     </section>
+
+    <!-- ==========================================================================
+         Bottom Call To Action with Peeking Mockup (Salix Signature Finale)
+         ========================================================================== -->
+    <section class="bottom-cta-section">
+      <div class="container">
+        <div class="bottom-cta-content" data-reveal>
+          <img src="logo-icon.png" alt="Sparknity" class="bottom-cta-icon">
+          <h2 class="bottom-cta-title reveal-text">Ready to turn your vision into high-scale reality?</h2>
+          <p class="bottom-cta-subtitle" data-reveal data-delay="100">
+            Book a 15-minute engineering discovery call or submit your project scope to get started this week.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;" data-reveal data-delay="200">
+            <button type="button" class="btn btn-salix open-call-modal">
+              <span>Schedule Discovery Call</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <a href="#contact" class="btn btn-secondary">Submit Project Brief</a>
+          </div>
+        </div>
+
+        <!-- Peeking Mockup rising from bottom -->
+        <div class="bottom-cta-mockup-wrap" data-reveal data-delay="300">
+          <div class="browser-chrome-bar" style="border-radius: 20px 20px 0 0;">
+            <div class="browser-dot" style="background:#ff5f56;"></div>
+            <div class="browser-dot" style="background:#ffbd2e;"></div>
+            <div class="browser-dot" style="background:#27c93f;"></div>
+            <div class="browser-url-pill">sparknity.com/console/analytics</div>
+          </div>
+          <div style="padding: 32px; background: #ffffff;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+              <div>
+                <div style="font-size: 18px; font-weight: 700; color: var(--text-primary); font-family: var(--font-heading);">Production Engineering Console</div>
+                <div style="font-size: 13px; color: var(--text-muted);">Real-time cluster health and deployment velocity across all client pods</div>
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <span class="project-tag" style="background: #eff6ff; color: #1470ef; margin: 0;">Sprint 42 · In Progress</span>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+              <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: 12px; padding: 16px;">
+                <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Uptime SLA</div>
+                <div style="font-size: 24px; font-weight: 700; color: #10b981; font-family: var(--font-heading); margin-top: 4px;">99.99%</div>
+              </div>
+              <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: 12px; padding: 16px;">
+                <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Avg Latency</div>
+                <div style="font-size: 24px; font-weight: 700; color: #1470ef; font-family: var(--font-heading); margin-top: 4px;">24ms</div>
+              </div>
+              <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: 12px; padding: 16px;">
+                <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Sprint Velocity</div>
+                <div style="font-size: 24px; font-weight: 700; color: #8b5cf6; font-family: var(--font-heading); margin-top: 4px;">18 pts/wk</div>
+              </div>
+              <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: 12px; padding: 16px;">
+                <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Security Scans</div>
+                <div style="font-size: 24px; font-weight: 700; color: #10b981; font-family: var(--font-heading); margin-top: 4px;">0 CVEs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ==========================================================================
@@ -1610,6 +1762,7 @@
             <li><a href="#work">Case Studies</a></li>
             <li><a href="#stack">Technology Stack</a></li>
             <li><a href="#reviews">Client Testimonials</a></li>
+            <li><a href="#pricing">Pricing Plans</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>

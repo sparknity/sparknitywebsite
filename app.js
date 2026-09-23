@@ -328,6 +328,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // 7b. Interactive Vertical Tabs Switcher (Salix Core Disciplines)
+  const verticalTabs = document.querySelectorAll('.vertical-tab-item');
+  const tabPanes = document.querySelectorAll('.v-tab-pane');
+  verticalTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      verticalTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const targetId = tab.getAttribute('data-tab');
+      tabPanes.forEach(pane => {
+        if (pane.id === targetId) {
+          pane.classList.add('active');
+        } else {
+          pane.classList.remove('active');
+        }
+      });
+    });
+  });
+
+  // 7c. Sprint Pricing Monthly / Quarterly Toggle Switch (SAVE 20%)
+  const pricingSwitch = document.getElementById('pricingSwitch');
+  if (pricingSwitch) {
+    pricingSwitch.addEventListener('click', () => {
+      const isQuarterly = pricingSwitch.classList.toggle('active');
+      const priceElements = document.querySelectorAll('.pricing-amount');
+      priceElements.forEach(el => {
+        const monthly = el.getAttribute('data-monthly');
+        const quarterly = el.getAttribute('data-quarterly');
+        el.textContent = isQuarterly ? `$${quarterly}` : `$${monthly}`;
+      });
+    });
+  }
+
   // 8. Interactive Form Selectable Pills & Submission
   const projectTypePills = document.querySelectorAll('.project-type-pill');
   projectTypePills.forEach(pill => {
