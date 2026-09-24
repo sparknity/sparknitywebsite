@@ -453,32 +453,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // 9. Modal Handlers (Book a Call)
-  const modalOverlay = document.getElementById('callModal');
-  const openModalBtns = document.querySelectorAll('.open-call-modal');
-  const closeModalBtn = document.getElementById('closeModalBtn');
-
-  if (modalOverlay) {
-    openModalBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        modalOverlay.classList.add('open');
-      });
-    });
-
-    if (closeModalBtn) {
-      closeModalBtn.addEventListener('click', () => {
-        modalOverlay.classList.remove('open');
-      });
-    }
-
-    modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) {
-        modalOverlay.classList.remove('open');
-      }
-    });
-  }
-
   // ==========================================================================
   // 10. Framer Motion Smooth Scroll (Lenis Engine)
   // ==========================================================================
@@ -712,5 +686,62 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 600);
     });
   }
+
+  // ==========================================================================
+  // 15. Global Technical Discovery Call Modal (Thinkitive-Style Instant Scheduler)
+  // ==========================================================================
+  const callModal = document.getElementById('callModal');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const openCallTriggers = document.querySelectorAll('.open-call-modal, [data-open-call-modal]');
+
+  function openModal() {
+    if (!callModal) return;
+    callModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    if (!callModal) return;
+    callModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  openCallTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', closeModal);
+  }
+
+  if (callModal) {
+    callModal.addEventListener('click', (e) => {
+      if (e.target === callModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && callModal.classList.contains('open')) {
+        closeModal();
+      }
+    });
+  }
+
+  // ==========================================================================
+  // 16. Multi-Page Active Nav Link Detection
+  // ==========================================================================
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const linkPath = href.split('/').pop().split('#')[0];
+    if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
 });
 

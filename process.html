@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Work (Process & Sprints) — Sparknity</title>
+  <meta name="description" content="Discover Sparknity's sprint cadence, engineering standards, 100% IP ownership guarantee, and transparent communication protocols.">
+  <meta name="keywords" content="Software Sprint Cadence, Agile Engineering, IP Ownership, Direct Senior Access, Sparknity Process">
+  
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:title" content="How We Work (Process & Sprints) — Sparknity">
+  <meta property="og:description" content="A calm, transparent way of shipping software. Weekly video demos, direct Slack with senior engineers, and 100% IP ownership.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo-icon.png">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Signature Top Spectrum Stripe -->
+  <div class="top-spectrum-bar"></div>
+
+  <!-- ==========================================================================
+       Header & Floating Pill Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="nav-floating-pill">
+      <!-- Official Sparknity Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Sparknity Home">
+        <img src="logo.png" alt="Sparknity" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="work.html" class="nav-link">Work</a></li>
+        <li><a href="process.html" class="nav-link active">Process</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Desktop Action Buttons -->
+      <div class="nav-actions">
+        <button type="button" class="btn btn-dark btn-nav-cta open-call-modal" id="navBookCallBtn">Book a 30-Min Call</button>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="index.html" class="mobile-nav-link"><span>Home</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+    <a href="services.html" class="mobile-nav-link"><span>Services</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+    <a href="work.html" class="mobile-nav-link"><span>Work & Case Studies</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+    <a href="process.html" class="mobile-nav-link active"><span>How We Work (Process)</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+    <a href="about.html" class="mobile-nav-link"><span>About Sparknity</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+    <a href="contact.html" class="mobile-nav-link"><span>Contact Us</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+    <button type="button" class="btn btn-dark open-call-modal" style="width: 100%; justify-content: center; margin-top: 14px; padding: 13px 20px; font-size: 15px; border-radius: 9999px;">Book a 30-Min Call</button>
+  </div>
+
+  <main style="padding-top: 80px;">
+    <!-- ==========================================================================
+         Process Hero
+         ========================================================================== -->
+    <section class="hero-section" style="padding-top: 50px; padding-bottom: 40px;">
+      <div class="container">
+        <div class="hero-content-wrap" style="max-width: 860px;">
+          <div class="eyebrow-pill" data-reveal>
+            <span class="dot"></span>
+            <span>⚡ THE SPARKNITY SPRINT METHODOLOGY</span>
+          </div>
+
+          <h1 class="hero-title reveal-text" style="font-size: clamp(38px, 5.5vw, 68px); letter-spacing: -0.05em; margin-bottom: 18px;">
+            A Calm, Predictable Way<br>of Building Software.
+          </h1>
+
+          <p class="hero-desc reveal-sentence" data-reveal data-delay="100" style="font-size: 18px; max-width: 700px; margin-bottom: 32px;">
+            We eliminate agency bloat, endless meeting overhead, and opaque billing. You get a direct partnership with senior engineers, weekly working demos, and 100% intellectual property ownership from day one.
+          </p>
+
+          <div class="hero-cta-group" data-reveal data-delay="160">
+            <button type="button" class="btn btn-dark open-call-modal" style="padding: 13px 26px; font-size: 15px;">Book a 30-Min Discovery</button>
+            <a href="#lifecycle" class="btn btn-light" style="padding: 13px 24px; font-size: 15px;">View Sprint Lifecycle ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4-Step Sprint Lifecycle (Thinkitive Clarity + Salix Aesthetics)
+         ========================================================================== -->
+    <section id="lifecycle" style="padding: 40px 0 80px;">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;">
+          <h2 style="font-size: clamp(28px, 3.5vw, 42px); letter-spacing: -0.04em; margin-bottom: 14px;">
+            From Concept to Code in 4 Predictable Sprints
+          </h2>
+          <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.6;">
+            Every project follows a battle-tested roadmap that eliminates technical surprises and guarantees launch velocity.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px;">
+          <!-- Step 1 -->
+          <div style="background: #ffffff; border: 1px solid var(--border-hairline); border-radius: 22px; padding: 32px; position: relative;">
+            <div style="font-size: 12px; font-weight: 700; color: var(--brand-blue); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px;">STAGE 01 · 48 HOURS</div>
+            <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px;">Discovery & Architecture Blueprint</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 18px;">
+              We conduct a technical deep dive into your product requirements, user personas, API integrations, and database schemas.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--text-primary); line-height: 1.8;">
+              <li>✓ Technical Scope Document</li>
+              <li>✓ Database & Cloud Topology</li>
+              <li>✓ Fixed-Scope Timeline & Milestones</li>
+            </ul>
+          </div>
+
+          <!-- Step 2 -->
+          <div style="background: #ffffff; border: 1px solid var(--border-hairline); border-radius: 22px; padding: 32px; position: relative;">
+            <div style="font-size: 12px; font-weight: 700; color: var(--brand-purple); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px;">STAGE 02 · WEEK 1</div>
+            <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px;">High-Fidelity Design & Prototyping</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 18px;">
+              We build tokenized Figma component systems and interactive prototypes so you can click through every flow before we write backend logic.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--text-primary); line-height: 1.8;">
+              <li>✓ Complete Figma Component Library</li>
+              <li>✓ Clickable Interactive Prototype</li>
+              <li>✓ UX Ergonomics & Flow Pressure-Test</li>
+            </ul>
+          </div>
+
+          <!-- Step 3 -->
+          <div style="background: #ffffff; border: 1px solid var(--border-hairline); border-radius: 22px; padding: 32px; position: relative;">
+            <div style="font-size: 12px; font-weight: 700; color: var(--brand-emerald); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px;">STAGE 03 · WEEKS 2 - 4</div>
+            <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px;">Bi-Weekly Production Sprints</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 18px;">
+              Senior engineers build modular, fully typed production code. Live ephemeral staging links let you test real progress after every pull request.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--text-primary); line-height: 1.8;">
+              <li>✓ Weekly Async Video Demos</li>
+              <li>✓ Live Staging Preview Environments</li>
+              <li>✓ Automated Test Suites & CI/CD</li>
+            </ul>
+          </div>
+
+          <!-- Step 4 -->
+          <div style="background: #ffffff; border: 1px solid var(--border-hairline); border-radius: 22px; padding: 32px; position: relative;">
+            <div style="font-size: 12px; font-weight: 700; color: #ec4899; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px;">STAGE 04 · FINAL WEEK</div>
+            <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px;">Deployment, Handover & Hypercare</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 18px;">
+              Security audits, domain cutover, and 100% repository transfer to your company's GitHub. We back your launch with 30 days of warranty.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--text-primary); line-height: 1.8;">
+              <li>✓ Production Cloud Cutover</li>
+              <li>✓ 100% Code & Asset Handover</li>
+              <li>✓ 30-Day Post-Launch Code Warranty</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ==========================================================================
+             The 4 Core Guarantees (Trust Engine)
+             ========================================================================== -->
+        <div style="background: #f8fafc; border: 1px solid var(--border-hairline); border-radius: 24px; padding: 48px 36px; margin-bottom: 60px;">
+          <div style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
+            <div class="eyebrow-pill" style="margin-bottom: 10px;">
+              <span class="dot" style="background: var(--brand-emerald);"></span>
+              <span>ZERO RISK · TOTAL CERTAINTY</span>
+            </div>
+            <h2 style="font-size: clamp(24px, 3vw, 34px); font-weight: 600; letter-spacing: -0.03em;">The 4 Sparknity Guarantees</h2>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+            <div>
+              <div style="font-size: 22px; margin-bottom: 8px;">📜</div>
+              <h4 style="font-size: 16px; font-weight: 600; margin-bottom: 6px;">100% Code & IP Ownership</h4>
+              <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                All code is written straight to your company's private repository. You own 100% of the intellectual property from day one with zero lock-in.
+              </p>
+            </div>
+
+            <div>
+              <div style="font-size: 22px; margin-bottom: 8px;">🤝</div>
+              <h4 style="font-size: 16px; font-weight: 600; margin-bottom: 6px;">Direct Senior Access</h4>
+              <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                No non-technical account managers or junior pass-throughs. You speak directly with the senior architect building your product.
+              </p>
+            </div>
+
+            <div>
+              <div style="font-size: 22px; margin-bottom: 8px;">🔒</div>
+              <h4 style="font-size: 16px; font-weight: 600; margin-bottom: 6px;">Mutual NDA on Day One</h4>
+              <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                We sign mutual non-disclosure agreements before reviewing proprietary roadmaps or sensitive business logic.
+              </p>
+            </div>
+
+            <div>
+              <div style="font-size: 22px; margin-bottom: 8px;">🛡️</div>
+              <h4 style="font-size: 16px; font-weight: 600; margin-bottom: 6px;">30-Day Code Warranty</h4>
+              <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                If any unexpected bug emerges within 30 days of production launch, we fix it promptly at zero additional cost.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pre-Footer CTA Bar -->
+        <div style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); border-radius: 24px; padding: 48px 36px; text-align: center; color: #ffffff; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-spectrum);"></div>
+          <h2 style="color: #ffffff; font-size: clamp(26px, 3.5vw, 38px); font-weight: 600; margin-bottom: 14px; letter-spacing: -0.04em;">
+            Ready to experience a calm, transparent build?
+          </h2>
+          <p style="color: #94a3b8; font-size: 16px; max-width: 600px; margin: 0 auto 28px; line-height: 1.6;">
+            Book a 30-minute discovery session with our senior engineers to review feasibility and sprint costs.
+          </p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="btn btn-light open-call-modal" style="padding: 13px 26px; font-size: 15px;">Book a 30-Min Call</button>
+            <a href="services.html" class="btn" style="background: rgba(255,255,255,0.12); color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 13px 26px; font-size: 15px;">Explore Services →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Global Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 16px; display: inline-flex;">
+            <img src="logo.png" alt="Sparknity" class="brand-logo-img">
+          </a>
+          <p style="font-size: 14px; line-height: 1.7; color: var(--text-secondary); max-width: 320px; margin-bottom: 24px;">
+            Sparknity is an AI-first software engineering studio and digital product partner. We design, build, and scale world-class software for ambitious startups and enterprises.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="X/Twitter">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" class="social-btn" aria-label="GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-nav-list">
+            <li><a href="services.html#ai-engineering">AI & Intelligent Agents</a></li>
+            <li><a href="services.html#mvp-development">Rapid MVP (3-5 Weeks)</a></li>
+            <li><a href="services.html#web-mobile">Web & Mobile Apps</a></li>
+            <li><a href="services.html#product-design">UI/UX & Design Systems</a></li>
+            <li><a href="services.html#cloud-devops">Cloud & DevOps Scaling</a></li>
+            <li><a href="services.html">View All Services →</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-nav-list">
+            <li><a href="about.html">About Sparknity</a></li>
+            <li><a href="process.html">How We Work (Sprints)</a></li>
+            <li><a href="work.html">Work & Case Studies</a></li>
+            <li><a href="about.html#values">Engineering Standards</a></li>
+            <li><a href="index.html#faq">Client FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Contact -->
+        <div>
+          <div class="footer-col-title">Connect & Legal</div>
+          <ul class="footer-nav-list">
+            <li><a href="contact.html">Book a Discovery Call</a></li>
+            <li><a href="contact.html">Get a Project Estimate</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="mailto:info@sparknity.com">info@sparknity.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Sparknity Studio Inc. All rights reserved.</div>
+        <div class="system-status-indicator">
+          <span class="status-dot"></span>
+          <span>All systems operational · Accepting projects for Q3-Q4</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Interactive Call Booking Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="callModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-top-accent"></div>
+      <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">&times;</button>
+      
+      <div class="eyebrow-pill" style="margin-bottom: 10px;">
+        <span class="dot"></span>
+        <span>⚡ 30-Minute Technical Discovery</span>
+      </div>
+      
+      <h3 id="modalTitle" style="font-size: 24px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.03em;">Talk Directly with a Senior Architect</h3>
+      <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+        Choose your preferred path below. Strictly technical feasibility, architecture options, and sprint estimates — zero sales fluff.
+      </p>
+      
+      <div class="modal-slot-box">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--brand-emerald);"></div>
+            <span style="font-size: 13.5px; font-weight: 600; color: var(--text-primary);">Next Slot Available: Today</span>
+          </div>
+          <span style="font-size: 11.5px; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 9999px; font-weight: 600;">100% Free</span>
+        </div>
+        <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.65;">
+          ✓ Direct 1-on-1 with Lead Engineer (ex-FAANG/Senior)<br>
+          ✓ System Architecture & Feasibility Teardown<br>
+          ✓ Mutual NDA guaranteed prior to deep disclosure
+        </div>
+      </div>
+
+      <div class="modal-action-row">
+        <a href="https://calendly.com" target="_blank" rel="noopener" class="btn btn-dark" style="width: 100%; padding: 13px 18px; font-size: 14px;">
+          Open Live Calendar ↗
+        </a>
+        <a href="contact.html" class="btn btn-light" style="width: 100%; padding: 13px 18px; font-size: 14px;">
+          Submit Project Brief →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Smooth Scroll Library & App Controller -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
